@@ -288,6 +288,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(#0093E9, #80D0C7);
 }
 
+
 #hero .container {
   padding-top: 72px;
 }
@@ -301,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 50px;
   font-size: 24px;
 }
@@ -321,41 +322,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #97D9E1;
-  color: #000000;
-}
-
-#hero .btn-watch-video {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  transition: 0.5s;
-  margin: 10px 0 0 25px;
-  color: #fff;
-  line-height: 1;
-}
-
-#hero .btn-watch-video i {
-  line-height: 0;
-  color: #fff;
-  font-size: 32px;
-  transition: 0.3s;
-  margin-right: 8px;
-}
-
-#hero .btn-watch-video:hover i {
-  color: #70dacd;
+  background: #70dacd;
+  color: #ffffff;
 }
 
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
+  
   #hero {
     height: 100vh;
     text-align: center;
   }
+  
   #hero .animated {
     -webkit-animation: none;
     animation: none;
@@ -365,6 +346,10 @@ h1, h2, h3, h4, h5, h6 {
   }
   #hero .hero-img img {
     width: 50%;
+  }
+  #hero .btn-get-started:hover {
+    background: #97D9E1;
+    color: #000000;
   }
 }
 
@@ -492,6 +477,7 @@ section {
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -1591,7 +1577,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #209dd8;
+  color: #000000;
 }
 
 #footer .footer-top {

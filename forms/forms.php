@@ -11,7 +11,8 @@ $headers = "From: noreply@contrivers.forms.com" . "\r\n" .
 "CC: noreply@contrivers.forms.com";
 if($email!=NULL){
     mail($to,$subject,$txt,$headers);
+    header("Location:https://programmer-shuvam.github.io/contrivers_webdesign/index.html");
 }
 //redirect
-header("Location:https://programmer-shuvam.github.io/contrivers_webdesign/index.html");
+
 ?>

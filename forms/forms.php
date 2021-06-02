@@ -1,18 +1,29 @@
+<html>
+   
+   <head>
+      <title>Sending HTML email using PHP</title>
+   </head>
+   
+   <body>
 <?php
-//get data from form  
-
-$name = $_POST['name'];
-$email= $_POST['email'];
-$message= $_POST['message'];
-$to = "contrivers512@gmail.com";
-$subject = $_POST['subject'];
-$txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Message =" . $message;
-$headers = "From: noreply@contrivers.forms.com" . "\r\n" .
-"CC: noreply@contrivers.forms.com";
-if($email!=NULL){
-    mail($to,$subject,$txt,$headers);
-    header("Location:https://programmer-shuvam.github.io/contrivers_webdesign/index.html");
-}
-//redirect
-
-?>
+         $to = "contrivers512@gmail.com";
+         $subject = "This is subject";
+         
+         $message = "<b>This is HTML message.</b>";
+         $message .= "<h1>This is headline.</h1>";
+         
+         $header = "From:sahilku2003@gmail.com \r\n";
+         $header .= "Cc:contrivers512@gmail.com \r\n";
+         $header .= "MIME-Version: 1.0\r\n";
+         $header .= "Content-type: text/html\r\n";
+         
+         $retval = mail ($to,$subject,$message,$header);
+         
+         if( $retval == true ) {
+            echo "Message sent successfully...";
+         }else {
+            echo "Message could not be sent...";
+         }
+      ?>
+ </body>
+</html>      

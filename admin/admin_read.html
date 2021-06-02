@@ -14,50 +14,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     const firebaseConfig = {
+        apiKey: "AIzaSyAxRCFcOEBEp0IwbiNkpabK9UjrAiYGb4Q",
+        authDomain: "contriversdev.firebaseapp.com",
+        projectId: "contriversdev",
+        storageBucket: "contriversdev.appspot.com",
+        messagingSenderId: "1019807225038",
+        appId: "1:1019807225038:web:27e3161c49b943b2abac9f",
+        measurementId: "G-S162K48CSL"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      var db = firebase.firestore();
+      db.settings({timestampsInSnapshots:true})
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
-  <div class="jumbotron jumbotron-fluid container" style="margin-top: 20vh;">
-  <div class="container">
-    <h1 class="display-4">Fuck u bro !!</h1>
-    <p class="lead">We have your login credentials we are reaching u soon.</p>
-  </div>
-</div>
 </body>
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
- const firebaseConfig = {
-    apiKey: "AIzaSyAxRCFcOEBEp0IwbiNkpabK9UjrAiYGb4Q",
-    authDomain: "contriversdev.firebaseapp.com",
-    projectId: "contriversdev",
-    storageBucket: "contriversdev.appspot.com",
-    messagingSenderId: "1019807225038",
-    appId: "1:1019807225038:web:27e3161c49b943b2abac9f",
-    measurementId: "G-S162K48CSL"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  var db = firebase.firestore();
-  db.settings({timestampsInSnapshots:true})
-</script>
-<script src="https://firebasestorage.googleapis.com/v0/b/contriversdev.appspot.com/o/admin%2Fapp.js?alt=media&token=90720097-6cdd-4cf8-8a05-65ce0113de31"></script>
-<!-- <script src="checker.js"></script> -->
-<!-- <script src="app.js"></script> -->
-<!-- <script src="extra.js"></script> -->
-<script src="https://firebasestorage.googleapis.com/v0/b/contriversdev.appspot.com/o/admin%2Fchecker.js?alt=media&token=e9420b09-9c59-48c7-b7b6-1e511ef63faf"></script>
-<script src="https://firebasestorage.googleapis.com/v0/b/contriversdev.appspot.com/o/admin%2Fextra.js?alt=media&token=c6e7b897-770e-4d65-8c68-5b9e19ddd93d"></script>
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.chips');
@@ -65,4 +52,6 @@
   });
   $('.chips').chips();
 </script>
+<script src="cred.js"></script>
+<script src="app.js"></script>
 </html>

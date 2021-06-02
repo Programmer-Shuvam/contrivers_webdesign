@@ -29,20 +29,36 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: linear-gradient(#0093E9, #80D0C7);
+  /* background: linear-gradient(#0093E9, #80D0C7); */
+  background: #000000;
+  text-align: center;
+}
+
+#preloader img{
+  /* font-family: 'Original Surfer', cursive;
+  color: black;
+  font-size: 2em; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  height: 150px;
 }
 
 #preloader:before {
   content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
+  position: absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 90px);
   border: 6px solid #ffffff00;
-  border-top-color: rgb(0, 0, 0);
-  border-bottom-color: rgb(0, 0, 0);
+  border-right-color: rgb(255, 255, 255);
+  border-top-color: rgb(255, 255, 255);
+  border-bottom-color: rgb(255, 255, 255);
+  border-right-style: dotted;
+  border-top-style: dotted;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 180px;
+  height: 180px;
   -webkit-animation: animate-preloader 1.0s linear infinite;
   animation: animate-preloader 1.0s linear infinite;
 }

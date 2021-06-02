@@ -155,7 +155,9 @@
   let preloader = select('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      preloader.remove()
+      $(".pre-img").css("animation","slideup 1.5s 1 ease-in-out forwards");
+      $("#logo-svg").css("display","block");
+      setTimeout(function(){ $("#preloader").fadeOut("slow"); }, 5000);
     });
   }
 

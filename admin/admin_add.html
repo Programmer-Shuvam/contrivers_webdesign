@@ -137,6 +137,7 @@ color:grey;
   var db = firebase.firestore();
   // db.settings({timestampsInSnapshots:true})
 </script>
+<script src="app.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" integrity="sha512-NiWqa2rceHnN3Z5j6mSAvbwwg3tiwVNxiAQaaSMSXnRRDh5C2mk/+sKQRw8qjV1vN4nf8iK2a0b048PnHbyx+Q==" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -171,9 +172,33 @@ function completeit(){
 });
 }
 </script>
-<!-- <script src="checker.js"></script> -->
-<!-- <script src="app.js"></script> -->
+<script>
+  initApp = function() {
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var photoURL = user.photoURL;
+            $(".dp").attr("src",photoURL)
+            read();
+            re_tag();
+            addit();
+          } else{
+            document.querySelector("body").innerHTML = ` <div class="jumbotron jumbotron-fluid container" style="margin-top: 20vh;">
+                <div class="container">
+                  <h1 class="display-4">Fuck u bro !!</h1>
+                  <p class="lead">We have your login credentials we are reaching u soon.</p>
+                </div>
+              </div>`
+          }
+        }, function(error) {
+          console.log(error);
+        });
+      };
+
+  window.addEventListener('load', function() {
+        initApp()
+      });      
+</script>
 <!-- <script src="extra.js"></script> -->
-<script src="https://firebasestorage.googleapis.com/v0/b/contriversdev.appspot.com/o/admin%2Fapp.js?alt=media&token=90720097-6cdd-4cf8-8a05-65ce0113de31"></script>
-<script src="https://firebasestorage.googleapis.com/v0/b/contriversdev.appspot.com/o/admin%2Fextra.js?alt=media&token=c6e7b897-770e-4d65-8c68-5b9e19ddd93d"></script>
+
 </html>

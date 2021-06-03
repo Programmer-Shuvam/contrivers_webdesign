@@ -157,7 +157,10 @@
     window.addEventListener('load', () => {
       $(".pre-img").css("animation","slideup 1.5s 1 ease-in-out forwards");
       $("#logo-svg").css("display","block");
-      setTimeout(function(){ $("#preloader").fadeOut("slow"); }, 5000);
+      setTimeout(() => {
+        $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
+       $("#preloader").fadeOut("slow"); 
+     }, 5000);
     });
   }
 

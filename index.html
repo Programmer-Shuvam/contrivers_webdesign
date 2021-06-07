@@ -710,24 +710,24 @@
           </div>
           <!-- https://script.google.com/macros/s/AKfycbyj76RooElV9hASL4y6lZUeSjMzl6ylogER56tBx5Gs6VWEz1g-wLCiPvU_C__UB2OoXQ/exec -->
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form id="mail-form" role="form" class="php-email-form">
+            <form id="mail-form" role="form" class="php-email-form" onsubmit="sendEmail()">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" placeholder="e.g. Joseph" class="form-control" id="name" required>
+                  <input type="text" name="name" placeholder="e.g. Joseph" class="form-control" id="formname" required>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" placeholder="e.g. xyz@example.com" id="email" required>
+                  <input type="email" class="form-control" name="email" placeholder="e.g. xyz@example.com" id="formemail" required>
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" placeholder="e.g. suggestions on designing" id="subject" required>
+                <input type="text" class="form-control" name="subject" placeholder="e.g. suggestions on designing" id="formsubject" required>
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
+                <textarea class="form-control" name="message" id="formmessage" rows="10" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
@@ -757,7 +757,8 @@
             <h4>Join Our Newsletter</h4>
             <p>Get updated with discounts and business messages by us.</p>
             <div id="mc_embed_signup">
-              <form action="https://contrivers.us6.list-manage.com/subscribe/post?u=44d95f43fd20d8bd728418a76&amp;id=cf3b0737f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <form action="https://contrivers.us6.list-manage.com/subscribe/post?u=44d95f43fd20d8bd728418a76&amp;id=cf3b0737f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" onsubmit="invokemessages()" class="validate" target="_blank" novalidate>
+             <!-- <form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" onsubmit="invokemessages()" class="validate" target="_blank" novalidate> -->
                   <div id="mc_embed_signup_scroll" >
                     <div class="mc-field-group col-12">
                       <label for="mce-EMAIL" class="col-12">Your Email</label>
@@ -877,6 +878,7 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <!-- firebase stuff starts -->
 
@@ -899,9 +901,12 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
 <script src="assets/js/firebase.js"></script>
 
-
+<!-- email stuff -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="assets/js/messenger.js"></script>
 
 <!-- firebase stuff ends -->
 
@@ -916,10 +921,8 @@
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/js/main.js"></script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="assets/js/forms.js"></script>
 
 </body>
 

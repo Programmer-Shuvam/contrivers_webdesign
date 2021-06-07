@@ -1557,6 +1557,7 @@ section {
   display: none;
   color: #fff;
   background: #ed3c0d;
+  border-radius: 25px;
   text-align: left;
   padding: 15px;
   font-weight: 600;

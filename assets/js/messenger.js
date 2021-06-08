@@ -12,7 +12,7 @@ function sendEmail() {
         Password: "Babu@Bubuaugjan3002",
         To: 'contrivers512@gmail.com',
         From: email,
-        Subject: subject,
+        Subject: "By "+name+" : "+subject,
         Body: message,
       })
         .then(function (message) {

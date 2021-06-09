@@ -66,6 +66,10 @@ $("body > form").submit(gotobase);
 function gotobase() {
   event.preventDefault();
   var form_name = $("#Name").val()
+  var form_category = $("#category").val()
+  var form_client = $("#client").val()
+  var form_date = $("#date").val()
+  var form_link = $("#link").val()
   var form_descrip = $("#descrip").val()
   var form_cover =   $(".changeit").attr("src")
   var form_gallery = []
@@ -81,6 +85,10 @@ function gotobase() {
   // console.log(form_gallery_name);
   db.collection("projects").add({
       name : form_name,
+      category : form_category,
+      client : form_client,
+      date : form_date,
+      link : form_link,
       descrip : form_descrip,
       cover: form_cover,
       gallery: form_gallery,
@@ -161,6 +169,10 @@ function read() {
   function renderdata(doc) {
     var id = doc.id
     var name = doc.data().name
+    var category = doc.data().category
+    var client = doc.data().client
+    var date = doc.data().date
+    var link = doc.data().link
     var descrip = doc.data().descrip
     var cover = doc.data().cover
     var esteemed = doc.data().esteemed
@@ -195,6 +207,22 @@ function read() {
           <div class="form-group">
             <label for="Name">Name</label>
             <input type="text" class="form-control" id="Name" value="`+name+`">
+          </div>
+          <div class="form-group">
+            <label for="Name">Category</label>
+            <input type="text" class="form-control" id="category" value="`+category+`">
+          </div>
+          <div class="form-group">
+            <label for="Name">Client</label>
+            <input type="text" class="form-control" id="client" value="`+client+`">
+          </div>
+          <div class="form-group">
+            <label for="Name">Date</label>
+            <input type="text" class="form-control" id="date" value="`+date+`">
+          </div>
+          <div class="form-group">
+            <label for="Name">Link</label>
+            <input type="text" class="form-control" id="link" value="`+link+`">
           </div>
           <div class="form-group">
             <label for="descrip">Description</label>
@@ -239,6 +267,10 @@ function read() {
 function updateit(id){
   event.preventDefault()
   var form_name = $("#"+id+" #Name").val()
+  var form_category = $("#"+id+" #category").val()
+  var form_client = $("#"+id+" #client").val()
+  var form_date = $("#"+id+" #date").val()
+  var form_link = $("#"+id+" #link").val()
   var form_descrip = $("#"+id+" #descrip").val()
   var form_cover =   $("#"+id+" .changeit").attr("src")
   var form_gallery = []
@@ -252,6 +284,10 @@ function updateit(id){
   })
   db.collection("projects").doc(id).update({
       "name" : form_name,
+      "category" : form_category,
+      "client" : form_client,
+      "date" : form_date,
+      "link" : form_link,
       "descrip" : form_descrip,
       "cover": form_cover,
       "gallery": form_gallery,

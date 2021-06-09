@@ -1028,6 +1028,7 @@ section {
 }
 
 .portfolio .portfolio-item .portfolio-img {
+  max-height: 25em;
   overflow: hidden;
 }
 
@@ -1068,6 +1069,14 @@ section {
   top: calc(50% - 18px);
   color: #fff;
   transition: 0.3s;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  margin: 6px;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link, .portfolio .portfolio-item .portfolio-info .details-link small{
+  font-size: 0.6em;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover, .portfolio .portfolio-item .portfolio-info .details-link:hover {
@@ -1093,6 +1102,11 @@ section {
   padding-top: 40px;
 }
 
+/*.portfolio-details .portfolio-details-slider{
+  height: 70vh;
+  overflow: hidden;
+}*/
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1116,7 +1130,7 @@ section {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px #0093E9;
+  box-shadow: 0px 0 30px rgb(55 81 126 / 8%);
 }
 
 .portfolio-details .portfolio-info h3 {

@@ -14,6 +14,7 @@ const id = searchParams.get('id')
 class fetchSingle {
 	constructor(id){
 		this.imgs = [];
+		this.keywords = null;
 		this.name = null;
 		this.category = null;
 		this.client = null;
@@ -36,8 +37,9 @@ class fetchSingle {
 		db.collection("projects").doc(this.id).get().then((doc) => {
 		    if (doc.exists) {
 				this.imgs.push(doc.data().cover);
+				this.keywords = doc.data().tags.join(", ");
 				this.name = doc.data().name;
-				this.name = doc.data().name;
+				this.category = doc.data().category;
 				this.descrip = doc.data().descrip;
 				this.client = doc.data().client;
 				this.date = doc.data().date;
@@ -55,6 +57,10 @@ class fetchSingle {
 	}
 
 	renderproject(doc){
+
+		document.querySelector('meta[name="keywords"]').setAttribute("content", this.keywords);
+		document.querySelector('meta[name="description"]').setAttribute("content", "Project by Contrivers for "+this.name+" : "+this.descrip);
+		document.title = "Project by Contrivers for "+this.name
 		this.head.append(this.name);
 		this.title.append(this.name);
 		this.pageDescrip.append(this.descrip);
@@ -71,6 +77,29 @@ class fetchSingle {
 
 		    this.gallery.append(code);
 		})
+
+		  new Swiper('.portfolio-details-slider', {
+		    speed: 400,
+		    loop: true,
+		    autoplay: {
+		      delay: 5000,
+		      disableOnInteraction: false
+		    },
+		    pagination: {
+		      el: '.swiper-pagination',
+		      type: 'bullets',
+		      clickable: true
+		    }
+		  });
+
+		    let preloader = select('#preloader');
+	  if (preloader) {
+	    window.addEventListener('load', () => {
+	      $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
+	      $("#preloader").fadeOut("slow"); 
+	    });
+	  }
+
 	}
 
 };

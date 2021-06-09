@@ -103,6 +103,9 @@ class projectFromStore {
           </div>
     `
     this.projContainer.append(code);
+    var scriptElm = document.createElement('script');
+    scriptElm.src = 'assets/js/main.js';
+    document.body.appendChild(scriptElm);
   };  
 
 

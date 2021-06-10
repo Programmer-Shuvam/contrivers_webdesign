@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">contrivers</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <ul>
+          <li><a class="nav-link scrollto" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Our Projects</li>
+        </ol>
+        <h2 id="fetchedTitle"></h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-top">
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: <span id="category"></span></li>
+                <li><strong>Client</strong>: <span id="client"></span></li>
+                <li><strong>Project date</strong>: <span id="date"></span></li>
+                <li><strong>Project URL</strong>: <a href="" target="_blank" id="link"></a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description">
+              <h2 id="mainTitle"></h2>
+              <p id="fetchedDesc"></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <footer id="footer">
+    <!-- Begin Mailchimp Signup Form -->
+    
+<!--End mc_embed_signup-->
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Get updated with discounts and business messages by us.</p>
+            <div id="mc_embed_signup">
+              <form action="https://contrivers.us6.list-manage.com/subscribe/post?u=44d95f43fd20d8bd728418a76&amp;id=cf3b0737f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" onsubmit="invokemessages()" class="validate" target="_blank" novalidate>
+             <!-- <form method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" onsubmit="invokemessages()" class="validate" target="_blank" novalidate> -->
+                  <div id="mc_embed_signup_scroll" >
+                    <div class="mc-field-group col-12">
+                      <label for="mce-EMAIL" class="col-12">Your Email</label>
+                      <input type="email" value="" name="EMAIL" class="col-12" id="mce-EMAIL" required="Please fill your Email ID">
+                    </div>
+                    <div class="mc-field-group" class="col-12">
+                      <label for="mce-FNAME" class="col-12">Your Name</label>
+                      <input type="text" value="" name="FNAME" class="col-12" id="mce-FNAME">
+                    </div>
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none; text-align: center;padding: 1em;"></div>
+                      <div class="response" id="mce-success-response" style="display:none; text-align: center;padding: 1em;"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_44d95f43fd20d8bd728418a76_cf3b0737f2" tabindex="-1" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                    </div>
+                </form>     
+          </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            <script type='text/javascript'>
+            (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>contrivers</h3>
+            <p><a target="_blank" href="https://g.page/contrivers?share">
+              Contrivers, <br>
+              Patrapada, Bhubaneswar, <br>
+              India.</a> <br><br>
+              <a href="tel:+917978678256"><strong>Phone:</strong> +91 79786 78256</a><br>
+              <a href="mailto: contrivers512@gmail.com"><strong>Email:</strong> contrivers@gmail.com</a><br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="about.html">Our Story</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#pricing">Pricing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a target="_blank" href="terms.html">Terms of service</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Website & App Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Digital Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Identity & Branding</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Get Us On Other Social Media Platform</p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/programershuvam" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/shuvam.mohanty.39/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/contrivers_512/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+              <a href="https://api.whatsapp.com/send?phone=917978678256&text="  target="_blank" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+              <a href="https://telegram.me/contriverdevs" class="telegram" target="_blank"><i class="bx bxl-telegram"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright"><span><a href="#">contrivers</a></span>
+        &copy; 2020. All Rights Reserved.
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+    <div id="preloader">
+    <div class="wrap-anim">
+      <div class="rot-logo">
+        <div class="pre-img">
+          <img src="../assets/img/favicon.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- firebase stuff starts -->
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="/__/firebase/8.6.3/firebase-app.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="/__/firebase/8.6.3/firebase-analytics.js"></script> -->
+
+<!-- Initialize Firebase -->
+<!-- <script src="/__/firebase/init.js"></script> -->
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../assets/js/other.js"></script>
+  <script src="../assets/js/single.js"></script>
+
+</body>
+
+</html>

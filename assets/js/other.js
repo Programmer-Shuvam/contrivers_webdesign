@@ -155,12 +155,8 @@
   let preloader = select('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
-      $(".pre-img").css("animation","slideup 1.5s 1 ease-in-out forwards");
-      $("#logo-svg").css("display","block");
-      setTimeout(() => {
-        $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
-       $("#preloader").fadeOut("slow"); 
-     }, 5000);
+      $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
+      $("#preloader").fadeOut("slow"); 
     });
   }
 
@@ -230,19 +226,19 @@
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  // new Swiper('.portfolio-details-slider', {
+  //   speed: 400,
+  //   loop: true,
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false
+  //   },
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     type: 'bullets',
+  //     clickable: true
+  //   }
+  // });
 
   /**
    * Animation on scroll

@@ -60,3 +60,58 @@ class secMessages {
 
   }  
 };
+
+class projectFromStore {
+  constructor(){
+    this.projFilter = $("#portfolio-flters");
+    this.projContainer = $(".portfolio-container");
+  }
+    callTags(){
+    var db = firebase.firestore();  
+    db.collection("mediatags").where("tags","==",true).get().then((snapshot) => {
+      snapshot.docs.forEach((doc) =>{
+          this.addtags(doc);
+      })
+  });
+  };
+    addtags(doc){
+      let name = doc.id
+      this.projFilter.append("<li data-filter=.filter-"+name+">"+name+"</li>");
+    };
+
+  projectsFromStore(){
+    var db = firebase.firestore();
+    db.collection("projects").where("showit","==",true).get().then((snapshot) => {
+      snapshot.docs.forEach((doc) =>{
+          this.addProject(doc);
+      })
+  });
+  };
+
+  addProject(doc){
+    let name = doc.data().name
+    let cover = doc.data().cover
+    let tags = doc.data().tags
+    let id = doc.id
+    let code = `
+      <div class="col-lg-4 col-md-6 portfolio-item filter-`+tags.join(" filter-")+`">
+            <div class="portfolio-img"><img src="`+cover+`" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>`+name+`</h4>
+              <a href="projects-by-contrivers?of-name=`+name+`&id=`+id+`" class="details-link" title="More Details" ><small>Go to `+name+`</small><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+    `
+    this.projContainer.append(code);
+    var scriptElm = document.createElement('script');
+    scriptElm.src = 'assets/js/main.js';
+    document.body.appendChild(scriptElm);
+  };  
+
+
+  }
+
+
+let pushToPorfolio = new projectFromStore();
+pushToPorfolio.callTags();
+pushToPorfolio.projectsFromStore();

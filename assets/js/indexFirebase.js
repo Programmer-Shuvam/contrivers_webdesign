@@ -76,7 +76,7 @@ class projectFromStore {
   };
     addtags(doc){
       let name = doc.id
-      this.projFilter.append("<li data-filter=.filter-"+name+">"+name+"</li>");
+      this.projFilter.append(`<li id="filter-`+name+`" onclick="filtering('filter-`+name+`')">`+name+`</li>`);
     };
 
   projectsFromStore(){
@@ -85,7 +85,10 @@ class projectFromStore {
       snapshot.docs.forEach((doc) =>{
           this.addProject(doc);
       })
+
+
   });
+     return Promise.resolve("Success");
   };
 
   addProject(doc){
@@ -94,7 +97,7 @@ class projectFromStore {
     let tags = doc.data().tags
     let id = doc.id
     let code = `
-      <div class="col-lg-4 col-md-6 portfolio-item filter-`+tags.join(" filter-")+`">
+      <div class="col-lg-4 col-md-6 portfolio-item filter-all filter-`+tags.join(" filter-")+`">
             <div class="portfolio-img"><img src="`+cover+`" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>`+name+`</h4>
@@ -103,9 +106,6 @@ class projectFromStore {
           </div>
     `
     this.projContainer.append(code);
-    var scriptElm = document.createElement('script');
-    scriptElm.src = 'assets/js/main.js';
-    document.body.appendChild(scriptElm);
   };  
 
 
@@ -114,4 +114,4 @@ class projectFromStore {
 
 let pushToPorfolio = new projectFromStore();
 pushToPorfolio.callTags();
-pushToPorfolio.projectsFromStore();
+pushToPorfolio.projectsFromStore()

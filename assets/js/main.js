@@ -218,6 +218,14 @@
   /**
    * Animation on scroll
    */
+function filtering(x){
+  
+  $(".filter-active").removeClass('filter-active');
+  $("#"+x).addClass('filter-active');
+  $(".portfolio-item").hide("ease-in-out");
+  $("."+x).show("ease-in-out");
+
+}
   window.addEventListener('load', () => {
     AOS.init({
       duration: 1000,
@@ -227,13 +235,4 @@
     });
   });
 
-function filtering(x){
-  
-  $(".filter-active").removeClass('filter-active');
-  $("#"+x).addClass('filter-active');
-  $(".portfolio-item").hide("ease-in-out");
-  $("."+x).show("ease-in-out");
-
-}
-
-
+const refresher = (x) => {console.log(x);AOS.refresh()};

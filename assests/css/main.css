@@ -1,0 +1,151 @@
+:root {
+  --blue: #010615;
+  --black: #000;
+  --neonBlue:  #55FFFF;
+  --white : #fff;
+}
+
+
+body{
+
+	background: linear-gradient(var(--blue), var(--black));
+	height: 100vh;
+	width: 100%;
+	overflow-x: hidden;
+	padding: 0px;
+
+}
+
+.sidebox{
+
+	width: 6em;
+	height: 100%;
+	background-color: var(--black);
+	float: left;
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	border-right: 1px solid var(--white);
+	padding: 0px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+.moto{
+
+	color: var(--neonBlue);
+	font-family: 'Comfortaa', cursive;
+	text-align: left;
+	display: flex;
+	transform-origin: bottom left;
+	transform: rotateZ(90deg) translateX(-10vh);
+	height: 5.4em;
+	width: 45vh;
+	/*margin: 0px 1em;*/
+
+}
+
+.favbrand{
+
+	transform:translateY(32vh) translateX(4em);
+	/*padding: 1em;*/
+	background-color: var(--black);
+	border-radius: 50%;
+	height : 5em;
+	width : 5em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform-origin: center;
+	position: relative;
+
+}
+
+.favlogo{
+
+	/*transform: scale(1) translateY(30vh) translateX(4em);*/
+	padding: 1em;
+	/*border-radius: 50%;*/
+	height : 3em;
+	/*width : 3em;*/
+	/*transform-origin: center;*/
+	/*position: relative;*/
+
+}
+
+
+.main{
+
+	height: 200em;
+	margin-left: 6em;
+
+}
+
+
+.brander{
+
+	font-size: 3em;
+	font-family: 'Original Surfer', cursive;
+	color: var(--neonBlue);
+	float: right;
+	top: 0%;
+	margin: 0.5em 1.5em;
+
+}
+
+.hero{
+
+	margin: 1em;
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
+}
+
+.hero div{
+
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding: 1em;
+
+}
+
+#coolsvg{
+
+	flex: 1;
+	width: 100%;
+
+}
+
+.herotxt{
+
+	flex: 1;
+	font-family: 'Jost', sans-serif;
+	color: var(--white);
+	display: flex;
+	text-align: left;
+	align-self: center;
+	margin-left: 2em;
+	transform: translateY(-15%);
+
+}
+
+.herotxt h2	{
+
+	font-size: 2.5em;
+	padding: 0.8em;
+
+}
+
+.herotxt p {
+
+	font-size: 1.2em;
+	padding: 0.5em 1em;
+
+}
+
+/*@media screen (max-width: ){
+	
+}*/

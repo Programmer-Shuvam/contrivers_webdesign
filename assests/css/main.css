@@ -9,10 +9,11 @@
 body{
 
 	background: linear-gradient(var(--blue), var(--black));
-	height: 100vh;
+	height: auto;
 	width: 100%;
 	overflow-x: hidden;
 	padding: 0px;
+	background-color: var(--black);
 
 }
 
@@ -29,6 +30,7 @@ body{
 	padding: 0px;
 	display: flex;
 	flex-direction: column;
+	z-index: 999;
 
 }
 
@@ -77,10 +79,12 @@ body{
 
 
 .main{
-
-	height: 200em;
-	margin-left: 6em;
-
+	background: linear-gradient(var(--blue), var(--black));
+	height: auto;
+	margin: auto;
+	padding-left: 5em;
+	transform: translateY(-10px);
+	max-width: 200em;
 }
 
 
@@ -92,7 +96,8 @@ body{
 	float: right;
 	top: 0%;
 	margin: 0.5em 1.5em;
-
+	text-shadow: 1px 2px 2px var(--neonBlue);
+	letter-spacing: 4px;
 }
 
 .hero{
@@ -116,6 +121,7 @@ body{
 
 	flex: 1;
 	width: 100%;
+	border-radius: 25px;
 
 }
 
@@ -146,6 +152,190 @@ body{
 
 }
 
-/*@media screen (max-width: ){
-	
-}*/
+
+.about{
+
+	color: var(--white);
+	font-family: 'Jost', sans-serif;
+
+}
+
+
+.about h2{
+
+	font-size: 3em;
+	color: var(--neonBlue);
+	margin: 1em auto;
+	text-align: center;
+	width: 30%;
+	border-bottom: 2px solid var(--neonBlue);
+	text-shadow: 1px 2px 2px var(--neonBlue);
+
+}
+
+.about-wrapper{
+
+	margin: 0px auto;
+	width: 80%;
+
+}
+
+.about-wrapper > div{
+
+	display: table-cell;
+	vertical-align: top;
+	width: 50%;
+
+}
+
+.key-points h3{
+
+	font-size: 1.5em;
+
+}
+
+.key-points li{
+
+	font-size: 1.1em;
+	line-height: 2em;
+
+}
+
+.about-content p{
+
+	margin: 1em auto;
+	width: 90%;
+	font-size: 1.2em;
+
+}
+
+@media screen and (max-width: 800px){
+
+	.sidebox{
+
+		width: 5em;
+		height: 100%;
+		background-color: var(--black);
+		float: left;
+		position: fixed;
+		left: 0%;
+		top: 0%;
+		border-right: 1px solid var(--white);
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+		z-index: 999;
+
+	}
+
+
+	.moto{
+
+		color: var(--neonBlue);
+		font-family: 'Comfortaa', cursive;
+		text-align: left;
+		display: flex;
+		transform-origin: bottom left;
+		transform: rotateZ(90deg) translateX(-10vh);
+		height: 4.8em;
+		width: 45vh;
+		/*margin: 0px 1em;*/
+
+	}
+
+	.favbrand{
+
+		transform:translateY(40vh) translateX(2.8em);
+		/*padding: 1em;*/
+		background-color: var(--black);
+		border-radius: 50%;
+		height : 4em;
+		width : 5em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transform-origin: center;
+		position: relative;
+
+	}
+
+	.favlogo{
+
+		/*transform: scale(1) translateY(30vh) translateX(4em);*/
+		padding: 1em;
+		/*border-radius: 50%;*/
+		height : 2em;
+		/*width : 3em;*/
+		/*transform-origin: center;*/
+		/*position: relative;*/
+
+	}
+
+
+		.main{
+			background: linear-gradient(var(--blue), var(--black));
+			height: 200em;
+			margin-left: 4em;
+			padding-left: 0em;
+			transform: translateY(-10px);
+	}
+
+		.brander{
+
+			font-size: 3em;
+			font-family: 'Original Surfer', cursive;
+			color: var(--neonBlue);
+			float: right;
+			top: 0%;
+			margin: 0.5em auto;
+
+	}
+
+
+
+
+	.hero{
+
+		/*margin: 1em;*/
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		padding: 0px;
+	}
+
+	.hero div{
+
+		display: inline-block;
+		vertical-align: top;
+		width: 100%;
+		padding: 0em;
+		text-align: center;
+		margin: auto;
+
+	}
+
+		#coolsvg{
+
+			flex: 1;
+			width: 65%;
+			/*height: 10%;*/
+			/*background-color: white;*/
+
+	}
+
+	.herotxt h2	{
+	margin-top: 3em;
+	font-size: 1.7em;
+	padding: 0.8em;
+
+	}
+
+	.herotxt p {
+
+		font-size: 1em;
+		padding: 0.5em ;
+		width: 100%;
+
+	}
+
+}

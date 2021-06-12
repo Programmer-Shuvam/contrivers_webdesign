@@ -1,10 +1,4 @@
-:root {
-  --blue: #010615;
-  --black: #000;
-  --neonBlue:  #55FFFF;
-  --white : #fff;
-}
-
+@import url("./vars.css");
 
 body{
 
@@ -77,9 +71,14 @@ body{
 
 }
 
+.navcontent{
+
+	transform: translateY(85%);
+
+}
 
 .main{
-	background: linear-gradient(var(--blue), var(--black));
+	background: radial-gradient(var(--blue) 10%, var(--black));
 	height: auto;
 	margin: auto;
 	padding-left: 5em;
@@ -96,7 +95,6 @@ body{
 	float: right;
 	top: 0%;
 	margin: 0.5em 1.5em;
-	text-shadow: 1px 2px 2px var(--neonBlue);
 	letter-spacing: 4px;
 }
 
@@ -167,7 +165,7 @@ body{
 	color: var(--neonBlue);
 	margin: 1em auto;
 	text-align: center;
-	width: 30%;
+	width: 40%;
 	border-bottom: 2px solid var(--neonBlue);
 	text-shadow: 1px 2px 2px var(--neonBlue);
 
@@ -176,7 +174,7 @@ body{
 .about-wrapper{
 
 	margin: 0px auto;
-	width: 80%;
+	width: 90%;
 
 }
 
@@ -194,6 +192,14 @@ body{
 
 }
 
+.key-points ul {list-style-type: none;}
+
+.key-points li i{
+
+	color: var(--neonBlue); 
+
+}
+
 .key-points li{
 
 	font-size: 1.1em;
@@ -203,9 +209,10 @@ body{
 
 .about-content p{
 
-	margin: 1em auto;
-	width: 90%;
+	margin: 2em auto;
+	width: 98%;
 	font-size: 1.2em;
+	text-align: justify;
 
 }
 
@@ -268,6 +275,13 @@ body{
 		/*width : 3em;*/
 		/*transform-origin: center;*/
 		/*position: relative;*/
+
+	}
+
+		.navcontent{
+
+			transform: translate(-10px,65%);
+			/*position: fixed;*/
 
 	}
 

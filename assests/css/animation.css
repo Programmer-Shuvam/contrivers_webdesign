@@ -1,3 +1,6 @@
+@import url("./vars.css");
+
+
 @keyframes cloud1{
 
 	0%{transform: translateX(0px);}
@@ -41,8 +44,25 @@
 @keyframes icons{
 
 	0%{transform: scale(1.0);}
-	50%{transform: scale(1.2);}
+	50%{transform: scale(1.5);}
 	100%{transform: scale(1.0);}
+
+}
+
+
+@keyframes taang{
+
+	0%{transform:rotateZ(0deg);}
+	50%{transform:rotateZ(2deg);}
+	100%{transform:rotateZ(0deg);}
+
+}
+
+@keyframes kamar{
+
+	0%{transform: translateY(0px) rotateZ(1deg);}
+	50%{transform: translateY(-1em) rotateZ(6deg);}
+	100%{transform: translateY(0px) rotateZ(1deg);}
 
 }
 
@@ -74,13 +94,23 @@
 
 #coolsvg #stage2{
 
-	animation: stage 8s infinite ease-in-out;
+	animation: stage 5s infinite ease-in-out;
 
 }
 
-#coolsvg #main-bandi{
 
-	animation: bandi 5s infinite ease-in-out;
+/*#coolsvg #taang path:nth-child(1) {
+
+	animation: kamar 5s infinite ease-in-out;
+	transform-origin: center;
+
+}*/
+
+
+#coolsvg #taang path:nth-last-child(2){
+
+	animation: taang 5s infinite ease-in-out;
+	transform-origin: center;
 
 }
 
@@ -88,19 +118,19 @@
 #coolsvg #insta{
 
 	animation: icons 10s infinite ease-in-out;
-	transform-origin: center;
+	transform-origin: top;
 
 }
 #coolsvg #fb{
 
 	animation: icons 8s infinite ease-in-out;
-	transform-origin: center;
+	transform-origin: top;
 
 }
 #coolsvg #google{
 
 	animation: icons 15s infinite ease-in-out;
-	transform-origin: center;
+	transform-origin: top left;
 
 }
 #coolsvg #linked{
@@ -111,13 +141,130 @@
 }
 #coolsvg #pinterest{
 
-	animation: icons 20s infinite ease-in-out;
+	animation: icons 11s infinite ease-in-out;
 	transform-origin: center;
 
 }
 #coolsvg #twitter{
 
 	animation: icons 12s infinite ease-in-out;
-	transform-origin: center;
+	transform-origin: top right;
+
+}
+
+
+@keyframes text-shadow {
+    0% {  
+        text-shadow: 
+            0 0 0 #0c2ffb, 
+            0 0 0 var(--neonBlue), 
+            0 0 0 #fb203b, 
+            0 0 0 #fb203b;
+    }
+
+    10% {  
+        text-shadow: 
+            0.12em 0 #0c2ffb, 
+            0.2em 0 var(--neonBlue), 
+            -0.12em 0 #fb203b, 
+            -0.2em 0 #fb203b;
+    }
+
+    20% {  
+        text-shadow: 
+            -0.062em 0 #0c2ffb, 
+            -0.12em 0 var(--neonBlue), 
+            0.062em 0 #fb203b, 
+            0.12em 0 #fb203b;
+    }
+    
+    60% {  
+        text-shadow: 
+            0 0 #0c2ffb, 
+            0 0 var(--neonBlue), 
+            -0 0 #fb203b, 
+            -0 0 #fb203b;
+    }
+
+    80% {  
+        text-shadow: 
+            0 0 #0c2ffb, 
+            0 0 var(--neonBlue), 
+            -0 0 #fb203b, 
+            -0 0 #fb203b;
+    }
+}
+.herotxt h2{transition: 1s ease-in-out;}
+.herotxt h2:hover{
+
+	animation: text-shadow 3s infinite ease-in-out;
+
+}
+
+
+@keyframes legs {
+
+	0%{transform:rotateZ(0deg);}
+	50%{transform:rotateZ(1deg);}
+	100%{transform:rotateZ(0deg);}
+
+}
+
+@keyframes chakri{
+
+	0%{transform: rotateZ(0deg);}
+	20%{transform: rotateZ(72deg);}
+	40%{transform: rotateZ(144deg);}
+	60%{transform: rotateZ(216deg);}
+	80%{transform: rotateZ(288deg);}
+	100%{transform: rotateZ(360deg);}
+
+}
+
+@keyframes chakka{
+
+	0%{transform: rotateZ(0deg);}
+	20%{transform: rotateZ(-72deg);}
+	40%{transform: rotateZ(-144deg);}
+	60%{transform: rotateZ(-216deg);}
+	80%{transform: rotateZ(-288deg);}
+	100%{transform: rotateZ(-360deg);}
+
+}
+
+
+#worksvg #londa > path:nth-child(1),#worksvg #londa > path:nth-child(9){
+
+	animation: legs 1s infinite ease-in-out;
+	transform-origin: left;
+
+}
+
+#worksvg #chakri{
+
+	animation: chakri 20s infinite forwards ease-in-out;
+	transform-origin: center ;
+	transform-box:  fill-box;
+	transform: translateY(2em);
+
+}
+
+#worksvg #hammer, #worksvg #doc, #worksvg #Re, #worksvg #analytics, #worksvg #rocket{
+
+	animation: chakka 20s infinite forwards ease-in-out;
+	transform-origin: center ;
+	transform-box:  fill-box;
+
+}
+
+.servicessvg h4{
+
+	width: 10em;
+	text-align: center;
+	font-size: 1.2em;
+	color: var(--neonBlue);
+	position: absolute;
+	transform: translate(12.5em,7em);
+	transition: 1s ease;
 
 }

@@ -6,6 +6,8 @@
   --white : #aed4d4;
   --brightwhite : #fff;
   --gray : #999999;
+  --red : #D70000a8;
+  --green: #2BD700;
 }
 
 body {
@@ -954,7 +956,7 @@ section {
   padding: 60px 40px;
   background: var(--blue);
   height: 100%;
-  border-top: 4px solid #fff;
+  border-top: 4px solid var(--brightwhite);
   border-radius: 5px;
 }
 
@@ -997,7 +999,7 @@ section {
 }
 
 .pricing ul i {
-  color: #28a745;
+  color: var(--green);
   font-size: 24px;
   position: absolute;
   left: 0;
@@ -1009,7 +1011,7 @@ section {
 }
 
 .pricing ul .na i {
-  color: var(--gray);
+  color: var(--red);
 }
 
 .pricing ul .na span {
@@ -1020,31 +1022,23 @@ section {
   display: inline-block;
   padding: 12px 35px;
   border-radius: 50px;
-  color: #70dacd;
   transition: none;
   font-size: 16px;
   font-weight: 500;
   font-family: "Jost", sans-serif;
   transition: 0.3s;
-  border: 1px solid linear-gradient(#0093E9, #80D0C7);
-}
-
-.pricing .buy-btn:hover {
-  background: linear-gradient(#0093E9, #80D0C7);
-  color: #fff;
-}
-
-.pricing .featured {
-  border-top-color: var(--white);
+  border: 1px solid;
+  border-color: var(--neonBlue);
 }
 
 .pricing .featured .buy-btn {
-  background: linear-gradient(#0093E9, #80D0C7);
-  color: #fff;
+  background: var(--neonBlue);
+  color: var(--black);
 }
 
 .pricing .featured .buy-btn:hover {
-  color: #000000;
+  background: var(--black);
+  color: var(--neonBlue);
 }
 
 @media (max-width: 992px) {
@@ -1086,7 +1080,7 @@ section {
 
 .faq .faq-list li {
   padding: 20px;
-  background: #fff;
+  background: var(--blue);
   border-radius: 4px;
   position: relative;
 }
@@ -1108,7 +1102,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #70dacd;
+  color: var(--neonBlue);
 }
 
 .faq .faq-list .icon-show, .faq .faq-list .icon-close {
@@ -1128,12 +1122,12 @@ section {
 }
 
 .faq .faq-list a.collapsed {
-  color: #37517e;
-  transition: 0.3s;
+  color: var(--white);
+  transition: 0.1s;
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #70dacd;
+  color: var(--neonBlue);
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1144,7 +1138,10 @@ section {
   display: none;
 }
 .faq .faq-list a.paralink{
-  color:#209dd8;
+  color:var(--brightwhite);
+}
+.faq .faq-list a.paralink:hover{
+  color:var(--neonBlue);
 }
 @media (max-width: 1200px) {
   .faq .faq-list {
@@ -1156,26 +1153,24 @@ section {
 # Contact
 --------------------------------------------------------------*/
 .contact .info {
-  border-top: 3px solid linear-gradient(#0093E9, #80D0C7);
-  border-bottom: 3px solid linear-gradient(#0093E9, #80D0C7);
   padding: 30px;
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
   width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 
 .contact .info i {
   font-size: 20px;
-  color: #70dacd;
+  color: var(--blue);
   float: left;
   width: 44px;
   height: 44px;
-  background: #e7f5fb;
+  background: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
+  border: 2px solid var(--white);
 }
 
 .contact .info h4 {
@@ -1183,56 +1178,36 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #37517e;
+  color: var(--brightwhite);
 }
 
 .contact .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #6182ba;
+  color: var(--brightwhite);
 }
 
 .contact .info .email p {
   padding-top: 5px;
 }
 
-.contact .info .social-links {
-  padding-left: 60px;
-}
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: linear-gradient(#0093E9, #80D0C7);
-  color: #fff;
-}
-
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: linear-gradient(#0093E9, #80D0C7);
-  color: #fff;
+  background: var(--black);
+  color: var(--neonBlue);
+  border-color: var(--neonBlue);
+}
+
+.contact .info .email:hover h4, .contact .info .address:hover h4, .contact .info .phone:hover h4 {
+  color: var(--neonBlue);
 }
 
 .contact .php-email-form {
   width: 100%;
-  border-top: 3px solid linear-gradient(#0093E9, #80D0C7);
-  border-bottom: 3px solid linear-gradient(#0093E9, #80D0C7);
+  border: 3px solid var(--white);
+  border-radius: 10px;
   padding: 30px;
-  background: #fff;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0);
 }
 
 .contact .php-email-form .form-group {
@@ -1249,8 +1224,8 @@ section {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
-  background: #ed3c0d;
+  color: var(--white);
+  background: var(--red);
   border-radius: 25px;
   text-align: left;
   padding: 15px;
@@ -1263,8 +1238,8 @@ section {
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
-  background: #18d26e;
+  color: var(--white);
+  background: var(--green);
   text-align: center;
   padding: 15px;
   font-weight: 600;
@@ -1272,7 +1247,7 @@ section {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 15px;
 }
@@ -1284,8 +1259,8 @@ section {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
+  border: 3px solid var(--green);
+  border-top-color: var(--white);
   -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
@@ -1306,28 +1281,33 @@ section {
 }
 
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #70dacd;
+  border-color: var(--neonBlue);
 }
 
 .contact .php-email-form input {
   height: 44px;
+  background: var(--white);
 }
 
 .contact .php-email-form textarea {
   padding: 10px 12px;
+  background: var(--white);
 }
 
 .contact .php-email-form button[type="submit"] {
-  background: linear-gradient(#0093E9, #80D0C7);
+  background: var(--white);
   border: 0;
   padding: 12px 34px;
-  color: #fff;
+  color: var(--black);
   transition: 0.4s;
   border-radius: 50px;
+  border: 2px solid;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  color: #000000;
+  background: var(--black);
+  color: var(--neonBlue);
+  border-color: var(--neonBlue);
 }
 
 @-webkit-keyframes animate-loading {

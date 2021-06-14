@@ -4,11 +4,13 @@
   --black: #000;
   --neonBlue:  #55FFFF;
   --white : #aed4d4;
+  --gray : #999999;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  background: radial-gradient(var(--blue) 20%,var(--black));
 }
 
 a {
@@ -25,63 +27,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Jost", sans-serif;
 }
 
-
-
-/*.sk-chase {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  opacity: 1;
-  animation: sk-chase 2.5s infinite linear both;
-}
-
-.sk-chase-dot {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0; 
-  animation: sk-chase-dot 2.0s infinite ease-in-out both; 
-}
-
-.sk-chase-dot:before {
-  content: '';
-  display: block;
-  width: 13px;
-  height: 13px;
-  background-color: white;
-  border-radius: 100%;
-  animation: sk-chase-dot-before 1.5s infinite ease-in-out both; 
-}
-
-.sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
-.sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
-.sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
-.sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
-.sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
-.sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
-.sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
-.sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
-.sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
-.sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
-.sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
-.sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
-
-@keyframes sk-chase {
-  100% { transform: rotate(360deg); } 
-}
-
-@keyframes sk-chase-dot {
-  80%, 100% { transform: rotate(360deg); } 
-}
-
-@keyframes sk-chase-dot-before {
-  50% {
-    transform: scale(0.4); 
-  } 100%, 0% {
-    transform: scale(1.0); 
-  } 
-}*/
 
 /*#preloader:after {
   content: "";
@@ -129,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: linear-gradient(#0093E9, #80D0C7);
+  background: var(--neonBlue);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -138,14 +83,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .back-to-top i {
   font-size: 24px;
-  color: #fff;
+  color: var(--blue);
   line-height: 0;
 }
 
-/* .back-to-top:hover {
-  background: #6bc1e9;
-  color: #fff;
-} */
 
 .back-to-top.active {
   visibility: visible;
@@ -160,7 +101,6 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   height: 100vh;
   margin-left: 5em;
-  background: radial-gradient(var(--blue) 20%,var(--black));
 }
 
 
@@ -300,21 +240,20 @@ section {
 }
 
 .section-title h2 {
-  font-size: 32px;
+  font-size: 3.3em;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   position: relative;
-  color:#70dacd;
+  color:var(--neonBlue);
 }
 
 .section-title h2::before {
   content: '';
   position: absolute;
   display: block;
-  width: 120px;
-  height: 1px;
+  width: auto;
   bottom: 1px;
   left: calc(50% - 60px);
 }
@@ -324,13 +263,13 @@ section {
   position: absolute;
   display: block;
   width: 40px;
-  height: 3px;
   bottom: 0;
   left: calc(50% - 20px);
 }
 
 .section-title p {
   margin-bottom: 0;
+  color: var(--white);
 }
 
 /*--------------------------------------------------------------
@@ -365,10 +304,9 @@ section {
 --------------------------------------------------------------*/
 .about{
 
-  height: 100vh;
+  /* height: 100vh; */
   margin-left: 5em;
   width: auto;
-  background: radial-gradient(var(--blue) 20%,var(--black));
 
 }
 
@@ -448,7 +386,8 @@ section {
 }
 
 .about .content .btn-learn-more:hover {
-  background: linear-gradient(#0093E9, #80D0C7);
+  /* background: linear-gradient(#0093E9, #80D0C7); */
+  border-color: var(--white);
   color: #fff;
   text-decoration: none;
 }
@@ -584,8 +523,12 @@ section {
 .skills .content h3 {
   font-weight: 700;
   font-size: 32px;
-  color: #70dacd;
+  color: var(--neonBlue);
   font-family: "Poppins", sans-serif;
+}
+
+.skills .content p{
+  color: var(--white);
 }
 
 .skills .content ul {
@@ -600,7 +543,7 @@ section {
 .skills .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #0093E9;
+  color: var(--neonBlue);
 }
 
 .skills .content p:last-child {
@@ -621,7 +564,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #0093E9;
+  color: var(--neonBlue);
 }
 
 .skills .progress .skill .val {
@@ -630,7 +573,7 @@ section {
 }
 
 .skills .progress-bar-wrap {
-  background: #e8edf5;
+  background: var(--gray);
   height: 10px;
 }
 
@@ -638,7 +581,6 @@ section {
   width: 1px;
   height: 10px;
   transition: .9s;
-  background-color: #0093E9;
 }
 
 /*--------------------------------------------------------------
@@ -1888,7 +1830,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 .navcontent ul li a:hover{
 
-  transform:translateX(-1em) scale(1.05);
-  transform-origin: right;
+  transform:translateX(0em) scale(1.3);
+  /* transform-origin: right; */
 
 }

@@ -200,6 +200,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 575px) {
+
+  #hero{margin-left: 3em;}
+
+
   #hero .hero-img svg {
     width: 100%;
   }
@@ -626,6 +630,8 @@ section {
 .services .icon-box:hover h4 a {
   color: #0093E9;
 }
+
+.services svg{width: 100%;}
 
 /*--------------------------------------------------------------
 # Cta
@@ -1764,4 +1770,25 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   transform:translateX(0em) scale(1.3);
   /* transform-origin: right; */
 
+}
+
+@media (max-width: 575px) {
+  .sidebox{width: 3em;}
+
+  .navcontent{
+
+    position: absolute;
+    bottom: 0%;
+    transform: translateX(-50%);
+    left: 15%;
+    /*transform-origin: 100% 50%;*/
+
+  }
+
+  .moto h3{
+    font-size: .7em;
+  }
+
+  .favbrand{top: 47%;}
+  #main section{margin-left: 3em;}
 }

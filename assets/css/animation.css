@@ -305,7 +305,7 @@
 
 #worksvg #chakri{
 
-	animation: chakri 20s infinite forwards ease-in-out;
+	animation: chakri 25s infinite forwards ease-in-out;
 	transform-origin: center ;
 	transform-box:  fill-box;
 	transform: translateY(2em);
@@ -314,7 +314,7 @@
 
 #worksvg #hammer, #worksvg #doc, #worksvg #Re, #worksvg #analytics, #worksvg #rocket{
 
-	animation: chakka 20s infinite forwards ease-in-out;
+	animation: chakka 25s infinite forwards ease-in-out;
 	transform-origin: center ;
 	transform-box:  fill-box;
 
@@ -327,9 +327,11 @@
 
 }
 
+#worksvg #headings path{transform: scale(1.4);}
+
 #worksvg #headings path:nth-last-child(1){
 
-	animation: worktxt1 20s infinite forwards ease-in-out;
+	animation: worktxt1 25s infinite forwards ease-in-out;
 	transform-origin: center ;
 	transform-box:  fill-box;
 
@@ -337,7 +339,7 @@
 
 #worksvg #headings path:nth-last-child(2){
 
-	animation: worktxt2 20s infinite forwards ease-in-out 2s;
+	animation: worktxt2 25s infinite forwards ease-in-out 2s;
 	transform-origin: center ;
 	transform-box:  fill-box;
 
@@ -345,7 +347,7 @@
 
 #worksvg #headings path:nth-last-child(3){
 
-	animation: worktxt3 20s infinite forwards ease-in-out 2s;
+	animation: worktxt3 25s infinite forwards ease-in-out 2s;
 	transform-origin: center ;
 	transform-box:  fill-box;
 
@@ -353,7 +355,7 @@
 
 #worksvg #headings path:nth-last-child(4){
 
-	animation: worktxt4 20s infinite forwards ease-in-out 2s;
+	animation: worktxt4 25s infinite forwards ease-in-out 2s;
 	transform-origin: center ;
 	transform-box:  fill-box;
 
@@ -361,7 +363,7 @@
 
 #worksvg #headings path:nth-last-child(5){
 
-	animation: worktxt5 20s infinite forwards ease-in-out 2s;
+	animation: worktxt5 25s infinite forwards ease-in-out 2s;
 	transform-origin: center ;
 	transform-box:  fill-box;
 
@@ -393,6 +395,14 @@
 
 }
 
+@keyframes shapes{
+
+	0%{transform: rotate(0deg);}
+	50%{transform: rotate(360deg);}
+	100%{transform: rotate(0deg);}
+
+}
+
 @keyframes hand{
 
 	0%{transform: rotateZ(0deg);}
@@ -401,10 +411,28 @@
 
 }
 
-#londi #pie, #londi #shapes{
+#londi #pie{
 
 	animation: pie 9s infinite forwards ease-in-out;
 	transform-origin: center ;
+	transform-box:  fill-box;
+
+}
+
+
+#londi #shapes path{
+
+	animation: shapes 12s infinite forwards ease-in-out;
+	transform-origin: center ;
+	transform-box:  fill-box;
+	/*transform: translateY(2em);*/
+
+}
+
+#londi #shapes path:nth-child(3), #londi #shapes path:nth-child(4){
+
+	animation: shapes 12s infinite forwards ease-in-out;
+	transform-origin: bottom;
 	transform-box:  fill-box;
 	/*transform: translateY(2em);*/
 
@@ -417,3 +445,6 @@
 	transform-box:  fill-box;
 
 }
+
+
+#servesvg{transform: scale(0.5);}

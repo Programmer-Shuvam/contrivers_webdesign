@@ -241,6 +241,61 @@
 }
 
 
+@keyframes worktxt1{
+
+	0%{opacity: 1;}
+	10%{opacity: 0;}
+	40%{opacity: 0;}
+	60%{opacity: 0;}
+	80%{opacity: 0;}
+	100%{opacity: 0;}
+
+}
+
+@keyframes worktxt2{
+
+	0%{opacity: 0;}
+	20%{opacity: 1;}
+	30%{opacity: 0;}
+	60%{opacity: 0;}
+	80%{opacity: 0;}
+	100%{opacity: 0;}
+
+}
+@keyframes worktxt3{
+
+	0%{opacity: 0;}
+	20%{opacity: 0;}
+	40%{opacity: 1;}
+	50%{opacity: 0;}
+	80%{opacity: 0;}
+	100%{opacity: 0;}
+
+}
+
+@keyframes worktxt4{
+
+	0%{opacity: 0;}
+	20%{opacity: 0;}
+	40%{opacity: 0;}
+	60%{opacity: 1;}
+	70%{opacity: 0;}
+	100%{opacity: 0;}
+
+}
+
+@keyframes worktxt5{
+
+	0%{opacity: 0;}
+	20%{opacity: 0;}
+	40%{opacity: 0;}
+	60%{opacity: 0;}
+	80%{opacity: 1;}
+	90%{opacity: 0;}
+	100%{opacity: 0;}
+
+}
+
 #worksvg #londa > path:nth-child(1),#worksvg #londa > path:nth-child(9){
 
 	animation: legs 1s infinite ease-in-out;
@@ -265,6 +320,55 @@
 
 }
 
+
+#worksvg #headings path{
+
+	opacity: 0;
+
+}
+
+#worksvg #headings path:nth-last-child(1){
+
+	animation: worktxt1 20s infinite forwards ease-in-out;
+	transform-origin: center ;
+	transform-box:  fill-box;
+
+}
+
+#worksvg #headings path:nth-last-child(2){
+
+	animation: worktxt2 20s infinite forwards ease-in-out 2s;
+	transform-origin: center ;
+	transform-box:  fill-box;
+
+}
+
+#worksvg #headings path:nth-last-child(3){
+
+	animation: worktxt3 20s infinite forwards ease-in-out 2s;
+	transform-origin: center ;
+	transform-box:  fill-box;
+
+}
+
+#worksvg #headings path:nth-last-child(4){
+
+	animation: worktxt4 20s infinite forwards ease-in-out 2s;
+	transform-origin: center ;
+	transform-box:  fill-box;
+
+}
+
+#worksvg #headings path:nth-last-child(5){
+
+	animation: worktxt5 20s infinite forwards ease-in-out 2s;
+	transform-origin: center ;
+	transform-box:  fill-box;
+
+}
+
+
+
 .servicessvg h4{
 
 	width: 10em;
@@ -274,5 +378,42 @@
 	position: absolute;
 	transform: translate(12.5em,7em);
 	transition: 1s ease;
+
+}
+
+
+@keyframes pie{
+
+	0%{transform: rotateZ(0deg);}
+	30%{transform: rotateZ(120deg);}
+	40%{transform: rotateZ(120deg);}
+	60%{transform: rotateZ(240deg);}
+	70%{transform: rotateZ(240deg);}
+	100%{transform: rotateZ(360deg);}
+
+}
+
+@keyframes hand{
+
+	0%{transform: rotateZ(0deg);}
+	50%{transform: translateX(-10px) rotateZ(-15deg);}
+	100%{transform: rotateZ(0deg);}
+
+}
+
+#londi #pie, #londi #shapes{
+
+	animation: pie 9s infinite forwards ease-in-out;
+	transform-origin: center ;
+	transform-box:  fill-box;
+	/*transform: translateY(2em);*/
+
+}
+
+#londi #hand{
+
+	animation: hand 3s infinite forwards ease-in-out;
+	transform-origin: top left ;
+	transform-box:  fill-box;
 
 }

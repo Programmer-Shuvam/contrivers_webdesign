@@ -195,13 +195,13 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
   #hero .hero-img svg {
-    width: 70%;
+    width: 100%;
   }
 }
 
 @media (max-width: 575px) {
   #hero .hero-img svg {
-    width: 80%;
+    width: 100%;
   }
   #hero .btn-get-started {
     font-size: 16px;
@@ -236,6 +236,7 @@ section {
   background: radial-gradient(var(--blue) 10%,var(--black));
 }
 
+#main section{margin-left: 5em;}
 .section-bg {
   background-color: #f3f5fa;
 }
@@ -324,7 +325,7 @@ section {
 }
 
 @media (max-width: 768px) {
-  .about h2{
+  #main h2{
 
     color: var(--neonBlue);
     font-size: 2.5em;
@@ -703,7 +704,7 @@ section {
 
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: var(--neonBlue);
-  text-decoration: underline;
+  /*text-decoration: underline;*/
 }
 
 .portfolio .portfolio-item {
@@ -732,6 +733,7 @@ section {
   background: var(--blue);
   padding: 10px 15px;
   border: 2px solid var(--neonBlue);
+  border-top: none;
   background: var(--black);
 }
 
@@ -1293,12 +1295,12 @@ section {
 
 .contact .php-email-form input {
   height: 44px;
-  background: var(--white);
+  background: var(--brightwhite);
 }
 
 .contact .php-email-form textarea {
   padding: 10px 12px;
-  background: var(--white);
+  background: var(--brightwhite);
 }
 
 .contact .php-email-form button[type="submit"] {
@@ -1605,7 +1607,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   padding-top: 5px;
   padding-bottom: 5px;
   color: rgba(0, 0, 0, 0);
-  border-top: 2px solid var(--neonBlue);
+  border-top: 2px solid var(--white);
   width: 100vw !important;
 }
 

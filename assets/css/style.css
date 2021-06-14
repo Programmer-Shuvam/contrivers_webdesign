@@ -402,18 +402,7 @@ section {
 .why-us .content h3 {
   font-weight: 400;
   font-size: 34px;
-  color: #0093E9;
-}
-
-.why-us .content h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 5px;
-}
-
-.why-us .content p {
-  font-size: 15px;
-  color: #848484;
+  color: var(--white);
 }
 
 .why-us .img {
@@ -437,7 +426,7 @@ section {
 
 .why-us .accordion-list li {
   padding: 20px;
-  background: #fff;
+  background: var(--blue);
   border-radius: 4px;
 }
 
@@ -454,7 +443,7 @@ section {
 }
 
 .why-us .accordion-list span {
-  color: #0093E9;
+  color: var(--neonBlue);
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
@@ -477,11 +466,11 @@ section {
 }
 
 .why-us .accordion-list a.collapsed {
-  color: #343a40;
+  color: var(--neonBlue);
 }
 
 .why-us .accordion-list a.collapsed:hover {
-  color: #0093E9;
+  color: var(--neonBlue);
 }
 
 .why-us .accordion-list a.collapsed .icon-show {

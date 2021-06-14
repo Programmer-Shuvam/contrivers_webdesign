@@ -232,7 +232,6 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
-  
   background: radial-gradient(var(--blue) 10%,var(--black));
 }
 
@@ -1335,80 +1334,39 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 15px 0;
-  background: #f3f5fa;
-  min-height: 40px;
-  margin-top: 72px;
-}
-
-@media (max-width: 992px) {
-  .breadcrumbs {
-    margin-top: 68px;
-  }
-}
-
-.breadcrumbs h2 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #37517e;
-}
-
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0 0 10px 0;
-  margin: 0;
-  font-size: 14px;
-}
-
-.breadcrumbs ol li + li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li + li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #4668a2;
-  content: "/";
-}
 
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: linear-gradient(#0093E9, #80D0C7);
+  background: radial-gradient(var(--blue) 10%,var(--black));
 }
 
 #footer .footer-newsletter {
   padding: 50px 0;
-  background: #f3f5fa;
   text-align: center;
   font-size: 15px;
-  color: #444444;
 }
-
+#footer .footer-newsletter p{
+  color: var(-white);
+}
 #footer .footer-newsletter h4 {
   font-size: 24px;
   margin: 0 0 20px 0;
   padding: 0;
   line-height: 1;
   font-weight: 600;
-  color: #70dacd;
+  color: var(--neonBlue);
 }
 
 #footer .footer-newsletter #mc_embed_signup {
   margin-top: 30px;
-  background: #fff;
+  background: var(--black);
   padding: 1.5em 1.5em;
   position: relative;
   border-radius: 50px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+  border: 2px solid var(--neonBlue);
   text-align: left;
 }
 
@@ -1431,6 +1389,7 @@ section {
   padding-bottom: 8px;
   font-size: 1.1em;
   font-family: "Open Sans", sans-serif;
+  color: var(--neonBlue);
 }
 
 .mc-field-group{margin: 1em auto; display: flex; justify-content: center; flex-direction: column; max-width: 35em;}
@@ -1513,7 +1472,6 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
 }
 
 #footer .footer-top .footer-contact {

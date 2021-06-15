@@ -1707,7 +1707,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 .sidebox{
 
   width: 5em;
-  height: 100%;
+  height: 100vh;
   background-color: var(--black);
   float: left;
   position: fixed;

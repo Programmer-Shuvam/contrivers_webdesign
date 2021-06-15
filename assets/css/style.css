@@ -151,16 +151,12 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-
 #headbrand h1{
-
   font-family: 'Original Surfer', cursive;
   color: var(--neonBlue) !important;
   text-align: right;
   transform: translateY(-0.5em);
-
 }
-
 
 #hero .container {
   padding-top: 0.5em;
@@ -210,16 +206,21 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
     text-align: center;
   }
-  
+  #headbrand h1{
+    padding-top: 1em;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.3em;
+  }
   #hero .animated {
     -webkit-animation: none;
     animation: none;
   }
-  #hero .hero-img {
+  #hero {
     text-align: center;
   }
-  #hero .hero-img svg {
-    width: 50%;
+  #hero svg {
+    width: 100vw;
   }
   #hero .btn-get-started:hover {
     background: #97D9E1;
@@ -232,13 +233,19 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 28px;
     line-height: 36px;
   }
+  #headbrand h1{
+    padding-top: 2em;
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1.3em;
+  }
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
-  #hero .hero-img svg {
-    width: 100%;
+  #hero svg {
+    width: 100vw;
   }
 }
 
@@ -247,8 +254,8 @@ h1, h2, h3, h4, h5, h6 {
   #hero{margin-left: 3em;}
 
 
-  #hero .hero-img svg {
-    width: 100%;
+  #hero svg {
+    width: 100vw;
   }
   #hero .btn-get-started {
     font-size: 16px;

@@ -1833,5 +1833,8 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   }
 
   .favbrand{top: 47%;}
-  #main section{margin-left: 3em;}
+  #main section, #faq, footer{margin-left: 3em;}
+}
+footer{
+  margin-left: 5em;
 }

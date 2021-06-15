@@ -1821,7 +1821,9 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   /* transform-origin: right; */
 
 }
-
+footer{
+  margin-left: 5em;
+}
 @media (max-width: 575px) {
   .sidebox{width: 3em;}
 
@@ -1842,6 +1844,4 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   .favbrand{top: 47%;}
   #main section, #faq, footer{margin-left: 3em;}
 }
-footer{
-  margin-left: 5em;
-}
+/*  */

@@ -14,7 +14,7 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: var(--white);
-  
+  background: var(--black);  
 }
 
 a {
@@ -1705,9 +1705,8 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 
 .sidebox{
-
   width: 5em;
-  height: 100vh;
+  height: 100%;
   background-color: var(--black);
   float: left;
   position: fixed;
@@ -1719,23 +1718,19 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   flex-direction: column;
   z-index: 999;
   overflow: visible;
-
 }
 
 
 .moto{
-
   color: var(--neonBlue);
   text-align: left;
   top: 1%;
   position: absolute;
   height: 23em;
   width: 5em;
-
 }
 
 .moto h3{
-
   display: flex;
   font-family: 'Comfortaa', cursive;
   align-items: center;
@@ -1747,11 +1742,9 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   position: absolute;
   top: 0%;
   width: 15em;
-
 }
 
 .favbrand{
-
   transform:translateY(-50%) translateX(-50%);
   top: 50%;
   left: 100%;
@@ -1765,7 +1758,6 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   transform-origin: center;
   position: absolute;
   border: 2px solid var(--white);
-
 }
 
 .favlogo{
@@ -1823,6 +1815,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 }
 footer{
   margin-left: 5em;
+  margin-right: 0em;
 }
 @media (max-width: 575px) {
   .sidebox{width: 3em;}
@@ -1843,5 +1836,5 @@ footer{
 
   .favbrand{top: 47%;}
   #main section, #faq, footer{margin-left: 3em;}
+  footer{margin-left: 3em;margin-right: 0em;}
 }
-/*  */

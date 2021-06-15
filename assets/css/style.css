@@ -196,6 +196,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
+#hero svg{
+
+  z-index: -9;
+
+}
+
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
@@ -207,7 +213,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   #headbrand h1{
-    padding-top: 1em;
+    padding-top: 0em;
     font-size: 4em;
     font-weight: 700;
     line-height: 1.3em;
@@ -220,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   #hero svg {
-    width: 100vw;
+    width: 100%;
   }
   #hero .btn-get-started:hover {
     background: #97D9E1;
@@ -228,14 +234,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
   }
   #headbrand h1{
-    padding-top: 2em;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     line-height: 1.3em;
   }
@@ -245,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
   #hero svg {
-    width: 100vw;
+    width: 65%;
   }
 }
 
@@ -253,14 +258,18 @@ h1, h2, h3, h4, h5, h6 {
 
   #hero{margin-left: 3em;}
 
+    #hero h1{padding-top: .1em;}
 
   #hero svg {
-    width: 100vw;
+    transform: scale(1.4);
+    width: 100%;
   }
   #hero .btn-get-started {
     font-size: 16px;
     padding: 10px 24px 11px 24px;
   }
+
+
 }
 
 @-webkit-keyframes up-down {
@@ -301,7 +310,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 3.3em;
+  font-size: 2.3em;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -382,7 +391,7 @@ section {
   #main h2{
 
     color: var(--neonBlue);
-    font-size: 2.5em;
+    font-size: 1.8em;
 
   }
 
@@ -1665,6 +1674,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   color: rgba(0, 0, 0, 0);
   border-top: 2px solid var(--white);
   width: 100vw !important;
+  margin-left: 5em;
 }
 
 #footer .copyright {
@@ -1689,6 +1699,12 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   #footer .credits {
     padding-top: 4px;
   }
+
+  #footer .footer-bottom {
+  margin-left: 2em;
+}
+
+
 }
 
 ::-webkit-scrollbar {
@@ -1813,9 +1829,8 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   /* transform-origin: right; */
 
 }
-footer{
+footer > *{
   margin-left: 5em;
-  margin-right: 0em;
 }
 @media (max-width: 575px) {
   .sidebox{width: 3em;}
@@ -1835,6 +1850,7 @@ footer{
   }
 
   .favbrand{top: 47%;}
-  #main section, #faq, footer{margin-left: 3em;}
-  footer{margin-left: 3em;margin-right: 0em;}
+  #main section, #faq{margin-left: 3em;}
+  footer > *{margin-left: 3em;}
+  .section-title h2{font-size: 1.6em;}
 }

@@ -447,4 +447,74 @@
 }
 
 
-#servesvg{transform: scale(0.5);}
+@keyframes searchgo{
+
+	0%{transform: translate(0%,15%) scale(0.8);  opacity: 1;}
+	25%{transform: translate(25%,-9%)  scale(1.0);  opacity: 1;}
+	50%{transform: translate(55%,-9%)  scale(1.0);  opacity: 1;}
+	75%{transform: translate(83%,15%)  scale(0.8);  opacity: 1;}
+	77%{transform: translate(86%,15%)  scale(0.8); opacity: 0;}
+	98%{transform: translate(-3%,15%)  scale(0.8);  opacity: 0;}
+	100%{transform: translate(0%,15%)  scale(0.8);  opacity: 1;}
+
+}
+
+@keyframes wrench{
+
+	0%{transform: translate(0%,0%) scale(1);  opacity: 1;}
+	25%{transform: translate(30%, 0%) scale(1);  opacity: 1;}
+	50%{transform: translate(65%,23%) scale(0.8);  opacity: 1;}
+	52%{transform: translate(68%,23%) scale(0.8);  opacity: 0;}
+	73%{transform: translate(-25%,23%) scale(0.8); opacity: 0;}
+	75%{transform: translate(-22%,23%) scale(0.8);  opacity: 1;}
+	100%{transform: translate(0%,0%) scale(1);  opacity: 1;}
+
+}
+
+@keyframes cloud{
+
+	0%{transform: translate(0%,0%) scale(1.0);  opacity: 1;}
+	25%{transform: translate(40%,20%) scale(0.8);  opacity: 1;}
+	27%{transform: translate(43%,20%) scale(0.8); opacity: 0;}
+	48%{transform: translate(-46%,20%) scale(0.8);  opacity: 0;}
+	50%{transform: translate(-43%,20%) scale(0.8);  opacity: 1;}
+	75%{transform: translate(-29%, 0%) scale(1.0);  opacity: 1;}
+	100%{transform: translate(0%,0%) scale(1.0);  opacity: 1;}
+
+}
+
+@keyframes bot{
+
+	0%{transform: translate(0%,-3%);  opacity: 1;}
+	2%{transform: translate(3%,-3%);  opacity: 0;}
+	23%{transform: translate(-87%,-3%);  opacity: 0;}
+	25%{transform: translate(-85%,-3%);  opacity: 1;}
+	50%{transform: translate(-93%,-40%) scale(1.4);  opacity: 1;}
+	75%{transform: translate(-63%,-40%) scale(1.4);  opacity: 1;}
+	100%{transform: translate(0%,-3%); opacity: 1;}
+
+}
+
+#servesvg #search{
+
+	animation: searchgo 8s infinite forwards ease-in-out;
+
+}
+
+#servesvg #wrench{
+
+	animation: wrench 8s infinite forwards ease-in-out;
+
+}
+
+#servesvg #cloud{
+
+	animation: cloud 8s infinite forwards ease-in-out;
+
+}
+
+#servesvg #chatbot{
+
+	animation: bot 8s infinite forwards ease-in-out;
+
+}

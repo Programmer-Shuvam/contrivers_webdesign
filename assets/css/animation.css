@@ -1,7 +1,7 @@
 @import url("./vars.css");
 
 
-@keyframes cloud1{
+/* @keyframes cloud1{
 
 	0%{transform: translateX(0px);}
 	50%{transform: translateX(5em);}
@@ -104,7 +104,7 @@
 
 	animation: stage1 6s infinite ease-in-out;
 
-}
+} */
 
 
 /*#coolsvg #taang path:nth-child(1) {
@@ -115,7 +115,7 @@
 }*/
 
 
-#coolsvg #taang path:nth-last-child(2){
+/* #coolsvg #taang path:nth-last-child(2){
 
 	animation: taang 5s infinite ease-in-out;
 	transform-origin: center;
@@ -294,7 +294,7 @@
 	90%{opacity: 0;}
 	100%{opacity: 0;}
 
-}
+} */
 
 #worksvg #londa > path:nth-child(1),#worksvg #londa > path:nth-child(9){
 

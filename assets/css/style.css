@@ -921,7 +921,11 @@ section {
 
 /*--------------------------------------------------------------
 # Team
---------------------------------------------------------------*/
+------------------------------------------------------------
+*/
+
+
+
 .team .member {
   position: relative;
   box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.05);
@@ -935,6 +939,7 @@ section {
   overflow: hidden;
   width: 180px;
   border-radius: 50%;
+  margin: 0px auto;
 }
 
 .team .member .pic img {
@@ -1016,6 +1021,25 @@ section {
 
 .team .member .social a + a {
   margin-left: 8px;
+}
+
+@media (max-width: 575px){
+
+    .team .member{
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: auto;
+
+    }
+
+    .team .member .member-info {
+        padding-left: 0px;
+      }
+
+
+
 }
 
 /*--------------------------------------------------------------
@@ -1688,10 +1712,10 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 }
 
 @media (max-width: 768px) {
-  #footer .footer-bottom {
+/*  #footer .footer-bottom {
     padding-top: 10px;
     padding-bottom: 10px;
-  }
+  }*/
   #footer .copyright {
     text-align: none;
     float: center;

@@ -148,6 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   height: 100vh;
   margin-left: 5em;
+  background: radial-gradient(var(--blue) 10%,var(--black));
 
 }
 
@@ -296,10 +297,9 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
-  background: radial-gradient(var(--blue) 10%,var(--black));
 }
 
-#main section{margin-left: 5em;}
+#main section{margin-left: 5em;background: radial-gradient(var(--blue) 10%,var(--black));}
 .section-bg {
   background-color: #f3f5fa;
 }

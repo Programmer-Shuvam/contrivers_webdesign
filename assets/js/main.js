@@ -239,13 +239,14 @@ const refresher = (x) => {console.log(x);AOS.refresh()};
 
 
 $("document").ready(function () {
-$('#coolsvg').waypoint({
-    handler: function (direction) {
-      var active = $(this);
-      if (direction == "down") active = active.prev();
-        $(this).css("visibility","hidden");
-    },
-    offset: "0%"
-  });
+  
+  $('#coolsvg').waypoint({
+      handler: function (direction) {
+        var active = $(this);
+        if (direction == "down") active = active.prev();
+          $(this).css("visibility","hidden");
+      },
+      offset: "0%"
+    });
 
 });

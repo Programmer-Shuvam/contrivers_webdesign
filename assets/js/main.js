@@ -238,15 +238,74 @@ function filtering(x){
 const refresher = (x) => {console.log(x);AOS.refresh()};
 
 
-$("document").ready(function () {
+// $("document").ready(function () {
   
-  $('#coolsvg').waypoint({
+//   $('#coolsvg').waypoint({
+//       handler: function (direction) {
+
+       
+//         var active = $(this);
+//         if (direction == "down") active = active.prev();
+//            console.log("yo")
+//       },
+//       offset: "-75%"
+//     });
+
+// });
+
+
+
+class svg_opti {
+
+  constructor(ele){
+
+    this.ele =  ele;
+    this.switch = false;
+
+  }
+
+  fuse(){
+
+    if (this.switch){
+
+      this.ele.css("animation-iteration-count","infinte");
+
+    } else{
+
+      this.ele.css("animation-iteration-count","0");
+
+    }
+
+  }
+
+  checker(){
+
+
+      // let fuser = this.fuse();
+      this.ele.waypoint({
       handler: function (direction) {
-        var active = $(this);
-        if (direction == "down") active = active.prev();
-          $(this).css("visibility","hidden");
+        if (this.switch){
+
+          // fuser();
+          this.switch = false;
+          console.log(this.switch)
+
+        } else{
+
+          // fuser();
+          this.switch = true;
+          console.log(this.switch)
+
+        }
       },
-      offset: "0%"
+      offset: "-75%"
     });
 
-});
+  }
+
+
+}
+
+
+let coolsvg = new svg_opti($("#coolsvg *"));
+coolsvg.checker()

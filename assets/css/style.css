@@ -692,6 +692,12 @@ section {
 
 .services svg{width: 100%;}
 
+@media (max-width: 575px){
+
+  .services svg{transform: scale(1.75); transform-origin: top;}
+
+}
+
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
@@ -1854,6 +1860,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 footer > *{
   margin-left: 5em;
 }
+
 @media (max-width: 575px) {
   .sidebox{width: 3em;}
 

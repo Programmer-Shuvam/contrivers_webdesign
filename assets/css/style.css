@@ -715,9 +715,11 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
+  overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("http://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center;
   background-size: cover;
   padding: 120px 0;
+  margin-left: 5em;
 }
 
 .cta h3 {
@@ -1892,7 +1894,7 @@ footer > *{
   }
 
   .favbrand{top: 47%;}
-  #main section, #faq{margin-left: 3em;}
+  #main section, #faq, .cta{margin-left: 3em;}
   footer > *{margin-left: 3em;}
   .section-title h2{font-size: 1.6em;}
   #footer .footer-bottom {

@@ -238,20 +238,6 @@ function filtering(x){
 const refresher = (x) => {console.log(x);AOS.refresh()};
 
 
-// $("document").ready(function () {
-  
-//   $('#coolsvg').waypoint({
-//       handler: function (direction) {
-
-       
-//         var active = $(this);
-//         if (direction == "down") active = active.prev();
-//            console.log("yo")
-//       },
-//       offset: "-75%"
-//     });
-
-// });
 
 
 
@@ -268,7 +254,7 @@ class svg_opti {
 
     if (this.switch){
 
-      this.ele.css("animation-iteration-count","infinte");
+      this.ele.css("animation-iteration-count","infinite");
 
     } else{
 
@@ -278,34 +264,97 @@ class svg_opti {
 
   }
 
-  checker(){
-
-
-      // let fuser = this.fuse();
-      this.ele.waypoint({
-      handler: function (direction) {
-        if (this.switch){
-
-          // fuser();
-          this.switch = false;
-          console.log(this.switch)
-
-        } else{
-
-          // fuser();
-          this.switch = true;
-          console.log(this.switch)
-
-        }
-      },
-      offset: "-75%"
-    });
-
-  }
-
-
 }
 
 
-let coolsvg = new svg_opti($("#coolsvg *"));
-coolsvg.checker()
+var coolsvg = new svg_opti($("#coolsvg *"));
+var worksvg = new svg_opti($("#worksvg *"));
+var londisvg = new svg_opti($("#londi *"));
+var servesvg = new svg_opti($("#servesvg *"));
+$("document").ready(function () {
+  
+  $('#coolsvg').waypoint({
+      handler: function (direction) {
+
+       
+        var active = $(this);
+        if (direction == "down") active = active.prev();
+        if (coolsvg.switch){
+
+          coolsvg.fuse();
+          coolsvg.switch = false;
+
+        } else{
+
+          coolsvg.fuse();
+          coolsvg.switch = true;
+
+        }
+      },
+      offset: "0%"
+    });
+
+    $('#worksvg').waypoint({
+      handler: function (direction) {
+
+       
+        var active = $(this);
+        if (direction == "down") active = active.prev();
+        if (worksvg.switch){
+
+          worksvg.fuse();
+          worksvg.switch = false;
+
+        } else{
+
+          worksvg.fuse();
+          worksvg.switch = true;
+
+        }
+      },
+      offset: "0%"
+    });
+
+      $('#londi').waypoint({
+      handler: function (direction) {
+
+       
+        var active = $(this);
+        if (direction == "down") active = active.prev();
+        if (londisvg.switch){
+
+          londisvg.fuse();
+          londisvg.switch = false;
+
+        } else{
+
+          londisvg.fuse();
+          londisvg.switch = true;
+
+        }
+      },
+      offset: "0%"
+    });
+
+      $('#servesvg').waypoint({
+      handler: function (direction) {
+
+       
+        var active = $(this);
+        if (direction == "down") active = active.prev();
+        if (servesvg.switch){
+
+          servesvg.fuse();
+          servesvg.switch = false;
+
+        } else{
+
+          servesvg.fuse();
+          servesvg.switch = true;
+
+        }
+      },
+      offset: "0%"
+    });  
+
+});

@@ -412,11 +412,11 @@ section {
   color:var(--neonBlue);
   margin-top: 6px;
   background: var(--black);
-  border: 2px solid var(--neonBlue);
+  border: 2px solid #1d6161;
   cursor: pointer;
-  transition: ease-out 0.5s;
-  -webkit-transition: ease-out 0.5s;
-  -moz-transition: ease-out 0.5s;
+  transition: ease-out 1s;
+  -webkit-transition: ease-out 1s;
+  -moz-transition: ease-out 1s;
   position: relative;
 }
 
@@ -430,31 +430,32 @@ section {
 }
 
 .btn-learn-more.btn-border-1::after {
-  bottom: -3px;
-  right: -3px;
-  border-left: 2px solid #D70000;
-  border-bottom: 2px solid #D70000;
+  bottom: -2px;
+  left: -2px;
+  border-left: 2px solid  var(--neonBlue);
+  border-bottom: 2px solid  var(--neonBlue);
   border-radius: 4px;
-  transition: width .1s ease .1s, height .1s ease, visibility 0s .2s;
+  transition:  width .1s ease .3s, height .1s ease .2s, visibility 0s 0.4s;
 }
 
 .btn-learn-more.btn-border-1::before {
-  top: -3px;
-  left: -3px;
-  border-top: 2px solid #D70000;
-  border-right: 2px solid #D70000;
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid  var(--neonBlue);
+  border-right: 2px solid  var(--neonBlue);
   border-radius: 4px;
-  transition: width .1s ease .3s, height .1s ease .2s, visibility 0s .4s;
+  transition: width .1s ease .3s, height .1s ease .2s, visibility 0s  0.4s;
 }
 
 .btn-learn-more.btn-border-1:hover {
   animation: pulse 1s ease-out .4s;
-  color: #D70000;
+  color:  var(--neonBlue);
+  box-shadow: 0px 0px 25px  var(--neonBlue);
 }
 
 .btn-learn-more.btn-border-1:hover{
 
-  border: none;
+  border: 2px solid transparent;
 
 }
 

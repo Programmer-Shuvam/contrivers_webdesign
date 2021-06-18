@@ -280,7 +280,8 @@ $("document").ready(function () {
 
         }
       },
-      offset: "-10%"
+      offset: "-10%",
+        context: ".main-content"
     });
 
     $('#worksvg').waypoint({
@@ -301,7 +302,8 @@ $("document").ready(function () {
 
         }
       },
-      offset: "0%"
+      offset: "-100%",
+        context: "#main"
     });
 
       $('#londi').waypoint({
@@ -321,7 +323,8 @@ $("document").ready(function () {
 
         }
       },
-      offset: "0%"
+      offset: "100%",
+        context: "#main"
     });
 
       $('#servesvg').waypoint({
@@ -342,10 +345,11 @@ $("document").ready(function () {
 
         }
       },
-      offset: "0%"
+      offset: "-100%",
+        context: "#main"
     });  
 
-    $(".skills-content").waypoint({
+    $("body .main-content #main .skills .skills-content").waypoint({
 
       handler : function(direction) {
 
@@ -357,7 +361,8 @@ $("document").ready(function () {
           });
         },
 
-        offset : "100%"
+        offset : "100%",
+        context: "#main"
         });  
 
 });

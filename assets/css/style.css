@@ -107,6 +107,23 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--neonBlue),var(--black));
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+
+
 #hero {
   width: auto;
   height: 100vh;
@@ -123,7 +140,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .container {
-  padding-top: 0.5em;
+  padding-top: .5em;
 }
 
 #hero h1 {
@@ -707,7 +724,7 @@ section {
 
 @media (max-width: 575px){
 
-  .services svg{transform: scale(1.75); transform-origin: top;}
+  .services svg{transform: scale(1.75); transform-origin: top; margin-bottom: 4em;}
 
 }
 
@@ -1749,19 +1766,6 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   }
 
 }
-
-::-webkit-scrollbar {
-  width: 10px;
-}
- 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--neonBlue),var(--black));
-}
-
-::-webkit-scrollbar-track {
-  background: var(--black);
-}
-
 
 .sidebox{
   width: 5em;

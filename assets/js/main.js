@@ -173,19 +173,8 @@
   /**
    * Skills animation
    */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
+      
+
 
   /**
    * Porfolio isotope and filter
@@ -291,7 +280,7 @@ $("document").ready(function () {
 
         }
       },
-      offset: "0%"
+      offset: "-10%"
     });
 
     $('#worksvg').waypoint({
@@ -318,7 +307,6 @@ $("document").ready(function () {
       $('#londi').waypoint({
       handler: function (direction) {
 
-       
         var active = $(this);
         if (direction == "down") active = active.prev();
         if (londisvg.switch){
@@ -356,5 +344,20 @@ $("document").ready(function () {
       },
       offset: "0%"
     });  
+
+    $(".skills-content").waypoint({
+
+      handler : function(direction) {
+
+          var active = $(this);
+          if (direction == "up") active = active.prev();
+          let progress = $('.progress .progress-bar');
+          progress.toArray().forEach((el) => {
+           $(el).css("width",$(el).attr("aria-valuenow")+"%")
+          });
+        },
+
+        offset : "100%"
+        });  
 
 });

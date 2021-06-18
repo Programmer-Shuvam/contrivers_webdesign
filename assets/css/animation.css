@@ -306,8 +306,8 @@
 #worksvg #chakri{
 
 	animation: chakri 25s infinite forwards ease-in-out;
-	-webkit-transform-origin: center ;
-	-webkit-transform-box:  fill-box;
+	transform-origin: center ;
+	transform-box:  fill-box;
 	-moz-transform-origin: center ;
 	-moz-transform-box:  fill-box;
 	transform: translateY(2em);
@@ -372,18 +372,6 @@
 }
 
 
-
-.servicessvg h4{
-
-	width: 10em;
-	text-align: center;
-	font-size: 1.2em;
-	color: var(--neonBlue);
-	position: absolute;
-	transform: translate(12.5em,7em);
-	transition: 1s ease;
-
-}
 
 
 @keyframes pie{

@@ -131,8 +131,8 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-#main > *{
-  /*margin-left: 5em;*/
+/*#main > *{
+  margin-left: 5em;
   margin: 8em auto;
   scroll-snap-align: start;
 }
@@ -141,26 +141,76 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1em;
   scroll-snap-align: center;
 
-}
+}*/
 
 /*#main::-webkit-scrollbar{display: none;}*/
-#main::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 10px;
 }
  
-#main::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: linear-gradient(var(--neonBlue),var(--black));
 }
 
-#main::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: var(--black);
 }
 
 
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+#main section{background: radial-gradient(var(--blue) 10%,var(--black));}
+.section-bg {
+  background-color: #f3f5fa;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 2.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  color:var(--neonBlue);
+}
+
+.section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: auto;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+7
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+  color: var(--white);
+}
 
 #hero {
   width: auto;
-  height: 100vh;
+  min-height: 100vh;
   /*margin-left: 5em;*/
   background: radial-gradient(var(--blue) 10%,var(--black));
 
@@ -174,7 +224,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .container {
-  padding-top: 2.5em;
+  padding-top: 0em;
+ 474- overflow: visible;
 }
 
 #hero h1 {
@@ -224,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 1024px) {
   
   #hero {
-    height: 100vh;
+    /*height: 100vh;*/
     text-align: center;
   }
   #headbrand h1{
@@ -305,56 +356,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Sections General
---------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-  overflow: hidden;
-}
-
-/*#main section{margin-left: 5em;background: radial-gradient(var(--blue) 10%,var(--black));}*/
-.section-bg {
-  background-color: #f3f5fa;
-}
-
-.section-title {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.section-title h2 {
-  font-size: 2.3em;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  position: relative;
-  color:var(--neonBlue);
-}
-
-.section-title h2::before {
-  content: '';
-  position: absolute;
-  display: block;
-  width: auto;
-  bottom: 1px;
-  left: calc(50% - 60px);
-}
-
-.section-title h2::after {
-  content: '';
-  position: absolute;
-  display: block;
-  width: 40px;
-  bottom: 0;
-  left: calc(50% - 20px);
-}
-
-.section-title p {
-  margin-bottom: 0;
-  color: var(--white);
-}
 
 /*--------------------------------------------------------------
 # Cliens
@@ -408,6 +409,14 @@ section {
     font-size: 1.8em;
 
   }
+
+  #hero h2 {
+    color: var(--white);
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
 
   .about .container{
     margin-top: 0px;
@@ -1121,13 +1130,39 @@ section {
   padding-top: 40px;
 }
 
+
+.myswiper{
+
+  width: auto;
+  margin: 5px auto;
+
+}
+
+.swiper-pagination-bullet-active{background-color: var(--neonBlue) !important;}
+
+.swiper-pagination{
+
+  position: relative;
+  margin: 1em;
+
+}
+
+.swiper-pagination-bullet{background: white; opacity: 0.8;} 
+
 .pricing .box {
   padding: 60px 40px;
+  display: flex;
+  /*float: left;*/
+  flex-direction: column;
   background: var(--blue);
-  height: 100%;
+  height: fit-content;
   border-top: 4px solid var(--neonBlue);
   border-bottom: 4px solid var(--neonBlue);
-  border-radius: 5px;
+  border-radius: 2%;
+  margin: 0px auto;
+  width: auto;
+  max-width: 30em;
+  /*scroll-snap-align: center;*/
 }
 
 .pricing h3 {
@@ -1380,6 +1415,21 @@ section {
   background: rgba(0, 0, 0, 0);
 }
 
+@media (max-width:575px){
+
+  .contact .php-email-form {
+      width: 100%;
+      border: none;
+      border-top: 2px solid var(--white);
+      border-bottom: 2px solid var(--white);
+      border-radius: 10px;
+      padding:30px 1px;
+      background: rgba(0, 0, 0, 0);
+    }
+
+}
+
+
 .contact .php-email-form .form-group {
   padding-bottom: 8px;
 }
@@ -1626,17 +1676,18 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   height: auto;
   color: var(--neonBlue);
   background: var(--black);
-  transition: 0.3s;
+   transition: box-shadow 0.5s ease-in-out 0s;
   border-radius: 50px;
   border: 2px solid var(--neonBlue);
 }
 
-#footer .footer-newsletter input[type="submit"]:hover{
-  border-color: var(--white);
-  background: var(--white);
-  color: var(--black);
-}
 
+
+#footer .footer-newsletter input[type="submit"]:hover {
+  animation: pulse 1s ease-out .4s;
+  color:  var(--neonBlue);
+  box-shadow: 0px 0px 25px  var(--neonBlue);
+}
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
@@ -1892,8 +1943,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   vertical-align: middle;
   color: var(--neonBlue);
   font-size: 0.65em;
-  margin: 0.5em auto;
-  padding: 0.3em;
+  margin: 0.6em auto;
   width: fit-content;
   position: relative;
   transition: 0.5s ease;
@@ -1905,44 +1955,11 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 .navcontent a span{ border: none; color: var(--neonBlue);}
 
-.navcontent ul li a:hover{
+.navcontent ul li a:hover,.navcontent ul li a.active{
 
-  transform:translateX(0em) scale(1.05);
+  transform:translateX(0em) scale(1.25);
+  /*color: red;*/
   /* transform-origin: right; */
-
-}
-
-.navcontent ul li a.active{
-
-  transform:translateX(0em) scale(1.05);
-
-}
-
-.navcontent ul li a:before{
-
-  content: "";
-  position: absolute;
-  bottom: 6%;
-  height: 4em;
-  width: 4em;
-  opacity: 0.5;
-  box-shadow: 0px 0px 0em var(--neonBlue);
-  border-radius: 25%;
-  transition: ease-in-out 1s box-shadow;
-
-}
-
-.navcontent ul li a.active::before,.navcontent ul li a:hover::before{
-  content: "";
-  position: absolute;
-  bottom: 6%;
-  height: 4em;
-  width: 4em;
-  opacity: 0.7;
-  background: linear-gradient(to right,var(--neonBlue),transparent,transparent,transparent, var(--neonBlue));
-  box-shadow: 0px 0px 2em var(--neonBlue);
-  border-radius: 25%;
-  transform-origin: center;
 
 }
 

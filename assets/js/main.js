@@ -442,13 +442,24 @@ $("document").ready(function () {
 });
 
 
+if (screen.width > 768){
 
-// var swiper = new Swiper($(".pricingswipe"), {
-//         slidesPerView: "auto",
-//         centeredSlides: true,
-//         spaceBetween: 30,
-//         pagination: {
-//           el: $(".swiper-pagination"),
-//           clickable: true,
-//         },
-//       });
+  var slidesper = 3;
+} else {
+
+  var slidesper = 1;
+
+}
+
+
+ var swiper = new Swiper(".mySwiper", {
+        slidesPerView: slidesper,
+        spaceBetween: 30,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });

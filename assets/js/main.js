@@ -349,21 +349,6 @@ $("document").ready(function () {
         context: "#main"
     });  
 
-    $("#main .skills .skills-content").waypoint({
-
-      handler : function(direction) {
-
-          var active = $(this);
-          if (direction == "up") active = active.prev();
-          let progress = $('.progress .progress-bar');
-          progress.toArray().forEach((el) => {
-           $(el).css("width",$(el).attr("aria-valuenow")+"%")
-          });
-        },
-
-        offset : "125%",
-        context: "#main"
-        });  
 
   $("#hero .container > *").waypoint({
 
@@ -401,6 +386,10 @@ $("document").ready(function () {
           if (["up", "down"].includes(direction)) active = active.prev();
           $(".navcontent ul li a.active").removeClass()
           $(".navcontent ul li:nth-child(3) a").attr("class","active");
+          let progress = $('.progress .progress-bar');
+          progress.toArray().forEach((el) => {
+           $(el).css("width",$(el).attr("aria-valuenow")+"%")
+          });
         },
 
         offset : "10%",

@@ -456,6 +456,9 @@ if (screen.width > 768){
         slidesPerView: slidesper,
         spaceBetween: 30,
         loop: true,
+        autoplay: {
+                    delay: 5000,
+                  },
         loopFillGroupWithBlank: true,
         centeredSlides: true,
         pagination: {

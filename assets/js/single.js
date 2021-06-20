@@ -22,7 +22,7 @@ class fetchSingle {
 		this.link = null;
 		this.descrip = null;
 		this.id = id;
-		this.gallery = $(".swiper-wrapper");
+		this.gallery = $(".galleryitems");
 		this.head = $("#fetchedTitle");
 		this.title = $("#mainTitle");
 		this.pageDescrip = $("#fetchedDesc");
@@ -72,25 +72,25 @@ class fetchSingle {
 
 		this.imgs.forEach(item => {
 			let code = `<div class="swiper-slide">
-		                  <img src="`+item+`" alt="image of name `+item+` of project named `+this.name+`">
+		                  <img onmouseover="scrollu(true)" onmouseout="scrollu(false)" src="`+item+`" alt="image of name `+item+` of project named `+this.name+`">
 		                </div>`;
 
 		    this.gallery.append(code);
 		})
 
-		  new Swiper('.portfolio-details-slider', {
-		    speed: 400,
-		    loop: true,
-		    autoplay: {
-		      delay: 5000,
-		      disableOnInteraction: false
-		    },
-		    pagination: {
-		      el: '.swiper-pagination',
-		      type: 'bullets',
-		      clickable: true
-		    }
-		  });
+		  // new Swiper('.portfolio-details-slider', {
+		  //   speed: 400,
+		  //   loop: true,
+		  //   autoplay: {
+		  //     delay: 5000,
+		  //     disableOnInteraction: false
+		  //   },
+		  //   pagination: {
+		  //     el: '.swiper-pagination',
+		  //     type: 'bullets',
+		  //     clickable: true
+		  //   }
+		  // });
 
 		    let preloader = select('#preloader');
 	  if (preloader) {
@@ -106,4 +106,12 @@ class fetchSingle {
 
 let pushProject = new fetchSingle(id);
 pushProject.fetchFromStore();
+
+scrollu = (bool) => {
+
+	if (bool){$(".galleryitems img").css("height","auto")}
+	else {$(".galleryitems img").css("height","75vh")}
+
+
+}
 

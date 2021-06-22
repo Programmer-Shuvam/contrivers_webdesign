@@ -9,6 +9,7 @@
   --red : #D70000a8;
   --green: #2BD700;
   --darkgray: #777777;
+  --Blue: #0093e0;
 }
 
 body {
@@ -2050,3 +2051,13 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   100%{ object-position: 0% 0%;}
 };
 
+
+.notice-head{
+  color: var(--neonBlue);
+}
+.meta{
+  color: var(--Blue);
+}
+.announcements{
+  margin-bottom: 0;
+}

@@ -197,11 +197,6 @@
       delay: 5000,
       disableOnInteraction: false
     },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
   });
 
   /**
@@ -466,3 +461,17 @@ if (screen.width > 768){
           clickable: true,
         },
       });
+
+
+
+document.getElementById("main").onscroll = () => {
+
+  if (screen.height >= document.getElementById("main").scrollTop) {
+
+     let x = document.getElementById('main').scrollTop / screen.height
+     console.log(x)
+     $("#hero").css({"transform":`rotateZ(${x*90}deg)`,"opacity":`${1-x}`})
+
+  }
+
+};

@@ -128,6 +128,17 @@ h1, h2, h3, h4, h5, h6 {
   scroll-snap-type: y mandatory;
   transition: ease-in-out;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
+}
+
+#main > * {
+
+  min-height: 100vh;
+  background: radial-gradient(var(--blue) 10%,var(--black));
+  /*position: relative;*/
+  /*top: 50%;*/
+  /*transform: translateY(-50%);*/
 
 }
 
@@ -165,7 +176,7 @@ section {
   overflow: hidden;
 }
 
-#main section{background: radial-gradient(var(--blue) 10%,var(--black));}
+/*#main section{background: radial-gradient(var(--blue) 10%,var(--black));}*/
 .section-bg {
   background-color: #f3f5fa;
 }
@@ -211,6 +222,7 @@ section {
 #hero {
   width: auto;
   min-height: 100vh;
+  transform-origin: bottom right;
   /*margin-left: 5em;*/
   background: radial-gradient(var(--blue) 10%,var(--black));
 
@@ -778,6 +790,7 @@ section {
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("http://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center;
   background-size: cover;
+  min-height: unset !important;
   padding: 120px 0;
   /*margin-left: 5em;*/
 }

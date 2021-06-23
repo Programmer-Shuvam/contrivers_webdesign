@@ -223,7 +223,7 @@ section {
 #hero {
   width: auto;
   min-height: 100vh;
-  transform-origin: bottom right;
+  transform-origin: bottom left;
   /*margin-left: 5em;*/
   background: radial-gradient(var(--blue) 10%,var(--black));
 
@@ -731,6 +731,38 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Profit
+--------------------------------------------------------------*/
+
+.profit{
+
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("http://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center !important;;
+  text-align: center;
+  padding: auto 2em;
+  min-height: unset !important;
+}
+
+.profit .profitwrapper{
+
+  margin: 5em auto 2em auto;
+  width: 100%;
+
+}
+
+.profit .profitbar{
+
+  margin: auto;
+  white-space: normal;
+  /*background: white;*/
+  height: 12em;
+  width: 12em;
+  display: inline-block;
+
+}
+
+
+.barinfo{display: none;}
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
 .services .icon-box {
@@ -789,8 +821,8 @@ section {
 --------------------------------------------------------------*/
 .cta {
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("http://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center;
-  background-size: cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("http://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center !important;
+  background-size: cover !important;
   min-height: unset !important;
   padding: 120px 0;
   /*margin-left: 5em;*/
@@ -805,6 +837,7 @@ section {
 .cta p {
   color: var(--white);
 }
+
 
 .cta .cta-btn {
   font-family: "Jost", sans-serif;

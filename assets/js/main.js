@@ -252,9 +252,17 @@ class svg_opti {
 
 
 var coolsvg = new svg_opti($("#coolsvg *"));
+
 var worksvg = new svg_opti($("#worksvg *"));
+
 var londisvg = new svg_opti($("#londi *"));
+
 var servesvg = new svg_opti($("#servesvg *"));
+
+var proj_img = new svg_opti($(".portfolio  *"));
+proj_img.fuse()
+proj_img.switch = true;
+
 $("document").ready(function () {
   
   $('#coolsvg').waypoint({
@@ -275,7 +283,7 @@ $("document").ready(function () {
 
         }
       },
-      offset: "-50%",
+      offset: "0%",
         context: "#main"
     });
 
@@ -297,7 +305,7 @@ $("document").ready(function () {
 
         }
       },
-      offset: "-100%",
+      offset: "-50%",
         context: "#main"
     });
 
@@ -318,7 +326,7 @@ $("document").ready(function () {
 
         }
       },
-      offset: "-100%",
+      offset: "-50%",
         context: "#main"
     });
 
@@ -340,10 +348,30 @@ $("document").ready(function () {
 
         }
       },
-      offset: "-100%",
+      offset: "-50%",
         context: "#main"
     });  
+// $('.portfolio').waypoint({
+//       handler: function (direction) {
 
+       
+//         var active = $(this);
+//         if (direction == "down") active = active.prev();
+//         if (proj_img.switch){
+
+//           proj_img.fuse();
+//           proj_img.switch = true;
+
+//         } else{
+
+//           proj_img.fuse();
+//           proj_img.switch = false;
+
+//         }
+//       },
+//       offset: "-50%",
+//         context: "#main"
+//     });  
 
   $("#hero .container > *").waypoint({
 
@@ -400,6 +428,17 @@ $("document").ready(function () {
           if (["up", "down"].includes(direction)) active = active.prev();
           $(".navcontent ul li a.active").removeClass()
           $(".navcontent ul li:nth-child(4) a").attr("class","active");
+          if (proj_img.switch){
+
+            proj_img.fuse();
+            proj_img.switch = false;
+
+          } else{
+
+            proj_img.fuse();
+            proj_img.switch = true;
+
+          }
         },
 
         offset : "10%",
@@ -469,8 +508,7 @@ document.getElementById("main").onscroll = () => {
   if (screen.height >= document.getElementById("main").scrollTop) {
 
      let x = document.getElementById('main').scrollTop / screen.height
-     console.log(x)
-     $("#hero").css({"transform":`rotateZ(${x*90}deg)`,"opacity":`${1-x}`})
+     $("#hero").css({"transform":`rotateZ(${-x*90}deg)`,"opacity":`${1-x}`})
 
   }
 

@@ -68,7 +68,7 @@ class projectFromStore {
   }
     callTags(){
     var db = firebase.firestore();  
-    db.collection("mediatags").where("tags","==",true).get().then((snapshot) => {
+    db.collection("mediatags").where("tags","==",false).get().then((snapshot) => {
       snapshot.docs.forEach((doc) =>{
           this.addtags(doc);
       })

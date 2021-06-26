@@ -556,7 +556,7 @@ function uploadtags() {
     var his_id = $(".fixed span").attr("id")
       alltags.forEach(ele => {
         if (!(st_alltags.includes(ele))){
-          db.collection('mediatags').doc(ele).set({tag:true}).then(function() {console.log("uploaded to media too!")})
+          db.collection('mediatags').doc(ele).set({tags:true}).then(function() {console.log("uploaded to media too!")})
         }
       })
     st_alltags.forEach(ele => {

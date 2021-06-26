@@ -415,7 +415,7 @@ $("document").ready(function () {
           });
         },
 
-        offset : "10%",
+        offset : "25%",
         context: "#main"
         });   
 

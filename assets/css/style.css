@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
-  min-height: 40px;
+  min-height: 40px !important;
 }
 
 .breadcrumbs #headbrand h1{
@@ -224,6 +224,7 @@ section {
   width: auto;
   min-height: 100vh;
   transform-origin: bottom left;
+  transition: 0.1s;
   /*margin-left: 5em;*/
   background: radial-gradient(var(--blue) 10%,var(--black));
 
@@ -1007,7 +1008,8 @@ section {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: white; 
+  opacity: 0.8;
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
@@ -1198,7 +1200,6 @@ section {
 
 }
 
-.swiper-pagination-bullet{background: white; opacity: 0.8;} 
 
 .pricing .box {
   padding: 60px 40px;

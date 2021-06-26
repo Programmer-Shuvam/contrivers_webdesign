@@ -63,21 +63,9 @@ class secMessages {
 
 class projectFromStore {
   constructor(){
-    this.projFilter = $("#portfolio-flters");
     this.projContainer = $(".portfolio-container");
   }
-    callTags(){
-    var db = firebase.firestore();  
-    db.collection("mediatags").where("tags","==",false).get().then((snapshot) => {
-      snapshot.docs.forEach((doc) =>{
-          this.addtags(doc);
-      })
-  });
-  };
-    addtags(doc){
-      let name = doc.id
-      this.projFilter.append(`<li id="filter-`+name+`" onclick="filtering('filter-`+name+`')">`+name+`</li>`);
-    };
+
 
   projectsFromStore(){
     var db = firebase.firestore();
@@ -113,5 +101,4 @@ class projectFromStore {
 
 
 let pushToPorfolio = new projectFromStore();
-pushToPorfolio.callTags();
 pushToPorfolio.projectsFromStore()

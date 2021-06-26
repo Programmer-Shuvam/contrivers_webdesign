@@ -1998,10 +1998,11 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   margin: 0.6em auto;
   width: fit-content;
   position: relative;
-  transition: 0.5s ease;
+  transition: 1s ease;
   border: none;
   text-decoration: none;
   font-family: 'Jost', sans-serif;
+  opacity: 0.8;
 
 }
 
@@ -2010,6 +2011,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 .navcontent ul li a:hover,.navcontent ul li a.active{
 
   transform:translateX(0em) scale(1.25);
+  opacity: 1;
   /*color: red;*/
   /* transform-origin: right; */
 
@@ -2095,3 +2097,4 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 .announcements{
   margin-bottom: 0;
 }
+

@@ -93,6 +93,11 @@ class fetchSingle {
 		        },
 		      });
 
+		$(document).ready(function() {
+			 endstarter();		   
+		}) ;
+
+
 	}
 
 };
@@ -158,7 +163,7 @@ class related {
     let id = doc.id
     let code = `
       <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-img"><img src="`+cover+`" onload="endstarter()" onerror="endstarter()" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="`+cover+`" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>`+name+`</h4>
               <a href="./?of-name=`+name+`&id=`+id+`" class="details-link" title="More Details" ><small>Go to `+name+`</small><i class="bx bx-link"></i></a>
@@ -182,7 +187,3 @@ function endstarter(){
 
 }
 
-
-// window.addEventListener('load', () => {
-// 	      $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");$("#preloader").fadeOut("slow"); 
-// 	    });

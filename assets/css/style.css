@@ -2149,7 +2149,8 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   background-size: cover;
   background-position: 50% 50%;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(0,0,0,0.4);
+  -webkit-text-fill-color: transparent;
+  filter: brightness(3);
   text-align: center;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -2173,10 +2174,15 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   border-radius: 25px;
   height: 100%;
   width: 100%;
-  filter: blur(10px) brightness(1.3);
+  filter: blur(10px) brightness(0.6);
 
 }
 
+.typecard:hover{
+
+
+
+}
 
 .category .row div:nth-child(1) .typecard h2{
 
@@ -2186,7 +2192,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 .category .row div:nth-child(2) .typecard h2{
 
-  background-image: url("https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160");
+  background-image: url("https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160");
 
 }
 
@@ -2197,11 +2203,6 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 }
 
-.category .row div:nth-child(3) .typecard img{
-
- filter: blur(10px) brightness(1.1);
-  
-}
 .category .row div:nth-child(4) .typecard h2{
 
   background-image: url("https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160");

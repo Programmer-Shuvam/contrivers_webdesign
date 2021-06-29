@@ -63,7 +63,7 @@ class secMessages {
 
 class projectFromStore {
   constructor(){
-    this.projContainer = $(".portfolio-container");
+    this.projContainer = $(".mainitems");
   }
 
 
@@ -98,7 +98,3 @@ class projectFromStore {
 
 
   }
-
-
-let pushToPorfolio = new projectFromStore();
-pushToPorfolio.projectsFromStore()

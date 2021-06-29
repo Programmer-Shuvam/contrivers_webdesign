@@ -226,49 +226,49 @@
 
         <div class="row justify-center">
 
-           <div class="col-12 col-md-4 col-sm-6">
+           <div class="col-12 col-md-6 col-sm-6">
 
-            <div class="typecard">
+            <div class="typecard" id="all" onclick="showCase(this.id)">
               <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
-              <h2>All</h2>
+              <h2 class="bala">All</h2>
             </div>
 
            </div>
-           <div class="col-12 col-md-4 col-sm-6">
+           <div class="col-12 col-md-6 col-sm-6">
 
-            <div class="typecard">
+            <div class="typecard" id="portfolio" onclick="showCase(this.id)">
               <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
               <h2>Portfolio</h2>
             </div>
 
            </div>
-           <div class="col-12 col-md-4 col-sm-6">
+           <div class="col-12 col-md-6 col-sm-6">
 
-            <div class="typecard">
+            <div class="typecard" id="business" onclick="showCase(this.id)">
               <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
               <h2>Business <br> Site</h2>
             </div>
 
            </div>
-           <div class="col-12 col-md-4 col-sm-6">
+           <div class="col-12 col-md-6 col-sm-6">
 
-            <div class="typecard">
+            <div class="typecard" id="e-commerce" onclick="showCase(this.id)">
               <img src="https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
               <h2>E-Commerce</h2>              
             </div>
 
            </div>
-           <div class="col-12 col-md-4 col-sm-6">
+           <div class="col-12 col-md-6 col-sm-6">
 
-            <div class="typecard">
+            <div class="typecard" id="prototypes" onclick="showCase(this.id)">
               <img src="https://images.pexels.com/photos/1178498/pexels-photo-1178498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
-              <h2>Prototype</h2>
+              <h2>Prototypes</h2>
             </div>
 
            </div>
-           <div class="col-12 col-md-4 col-sm-6">
+           <div class="col-12 col-md-6 col-sm-6">
 
-            <div class="typecard">
+            <div class="typecard" id="custom" onclick="showCase(this.id)">
               <img src="https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
               <h2>Custom</h2>
             </div>
@@ -277,6 +277,32 @@
 
         </div>
 
+      </div>
+
+    </section>
+
+    <section class="exhibition">
+
+      <header>
+        <h2> Categories : </h2>
+        <ul>
+          <li><a id="all" class="" href="">All</a></li>
+          <li><a id="portfolio" href="">Portfolio</a></li>
+          <li><a id="business" href="">Business site</a></li>
+          <li><a id="e-commerce" href="">E-Commerce</a></li>
+          <li><a id="prototypes" href="">Prototypes</a></li>
+          <li><a id="custom" href="">Custom</a></li>
+        </ul>
+      </header>
+
+      <div class="casepreloader">
+        <img src="../assets/img/favicon.png" alt="">
+      </div>
+      <div class="showcase swiper-container" style="display: none;">
+        <div class="swiper-wrapper">
+
+        </div>
+        <div class="swiper-pagination"></div>
       </div>
 
     </section>
@@ -427,11 +453,7 @@
 <!-- <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- <script src="../assets/js/other.js"></script> -->
-<script src="../assets/js/single.js"></script>
 <script src="../assets/js/indexFirebase.js"></script>
-<script>
-endstarter()
-</script>
-
+<script src="../assets/js/project.js"></script>
 </body>
 </html>

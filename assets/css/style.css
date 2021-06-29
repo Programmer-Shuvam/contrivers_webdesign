@@ -2057,7 +2057,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 .galleryitems div{
 
   width: 100%;
-  height: 75vh;
+  max-height: 75vh;
   overflow-y: scroll;
 
 }
@@ -2112,20 +2112,22 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 }
 
+
 .typecard{
 
-  padding-top: 62.5%;
+  padding-top: 40%;
   background-position: center;
   background-size: cover;
-  background: grey;
+  background: var(--white);
   backdrop-filter: blur(5px) brightness(0.6);
   background-blend-mode: multiply;
   width: 100%;
-  height: 10em;
-  margin: 10px;
+  max-width: 30em;
+  min-height: 15em;
+  margin: 1em auto;
   border-radius: 25px;
-  display: inline-block;
   overflow: hidden;
+  transition: 1s;
 }
 
 .typecard h2 {
@@ -2134,6 +2136,9 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   top: 0%;
   left: 0%;
   padding: 20% 0%;
+  display: inline;
+  overflow: hidden;
+  width: max-content;
   /*transform: translate(-50%,0%);*/
   /*text-shadow: 0px 0px 4px white;*/
   /*-webkit-text-stroke-width: 0.5px;*/
@@ -2150,20 +2155,21 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   background-position: 50% 50%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: brightness(3);
+  filter: brightness(2);
   text-align: center;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
+  transition: 0.5s;
 }
 
-.typecard h2::before{
+/*.typecard h2::before{
 
   content: "";
   background: red;
   width: 10em;
   height: 10em;
 
-}
+}*/
 
 .typecard img{
 
@@ -2174,13 +2180,35 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   border-radius: 25px;
   height: 100%;
   width: 100%;
-  filter: blur(10px) brightness(0.6);
+  filter: blur(5px) brightness(0.4);
+  transition: 0.5s;
 
 }
 
 .typecard:hover{
 
+  transform: translateY(-10px);
+  cursor: pointer;
+  box-shadow: 0px 10px 25px var(--neonBlue);
 
+}
+
+.typecard:hover h2{
+
+  font-size: 4.5em;
+  padding: 15% 0%;
+  /*-webkit-text-fill-color: rgba(225, 255, 255, 0);*/
+
+}
+
+
+@media (max-width: 768px){
+
+  .typecard h2{
+
+    font-size: 3em !important;
+
+  }
 
 }
 
@@ -2203,6 +2231,14 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
 }
 
+.category .row div:nth-child(3) .typecard:hover h2{
+
+  font-size: 4.5em;
+  padding: 10% 0%;
+  color: rgba(225, 255, 255, 0.5);
+
+}
+
 .category .row div:nth-child(4) .typecard h2{
 
   background-image: url("https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160");
@@ -2220,4 +2256,112 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   background-image: url("https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160");
 
 }
+
+.exhibition{
+
+  border-radius: 25px;
+  display: none;
+  border : 2px solid var(--neonBlue);
+  margin: 10px;
+  height: fit-content; !important;
+}
+
+@media (max-width: 576px){
+
+  .exhibition{
+
+    border-radius: 25px;
+    border: none;
+    margin: 2px;
+    height: fit-content; !important;
+  }
+
+}
+
+.exhibition div{
+
+  height: auto !important;
+
+
+}
+
+.exhibition .galleryitems div{
+
+  width: 100%;
+  height: 75vh !important;
+  overflow-y: scroll;
+
+}
+
+.exhibition header{
+
+  margin: 0px auto;
+  text-align: center;
+}
+
+.exhibition header *{
+
+  display: inline-block;
+  padding: 10px;
+
+}
+
+.exhibition li a{
+
+  transition: 0.2s;
+  z-index: 99;
+
+}
+
+.exhibition header li a.active ,.exhibition header li a:hover {
+
+  border-bottom: 3px solid var(--neonBlue);
+  border-radius: 10%;
+  color: var(--white);
+
+}
+
+.exhibition .showcase, .casepreloader{
+
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-top : 2px solid var(--neonBlue);
+  width: 100%;
+  height: 20em;
+
+}
+
+.exhibition .showcase .swiper-pagination-bullet{
+
+  width: 1.5em;
+  height: 1.5em;
+  color: var(--black) !important;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+  background-color: var(--white);
+  opacity: 0.8;
+
+}
+
+.casepreloader img{
+
+  width: auto;
+  height: 3.5em;
+  border-radius: 50%;
+  position: sticky;
+  margin: 10vh auto; 
+  background: black;
+  padding: 10px;
+  left: 50%;
+  border: 2px solid white;
+  transform: translateX(-1.1em);
+  animation: casechakri 1.5s infinite ease-in-out forwards;
+
+}
+
+@keyframes casechakri {
+  0% { transform: translateX(-1.1em) rotate(0deg); }
+  100% { transform: translateX(-1.1em) rotate(720deg); } 
+}
+
 

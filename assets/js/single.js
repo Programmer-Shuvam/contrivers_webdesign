@@ -1,13 +1,3 @@
-firebase.initializeApp({
-  apiKey: "AIzaSyAxRCFcOEBEp0IwbiNkpabK9UjrAiYGb4Q",
-  authDomain: "contriversdev.firebaseapp.com",
-  projectId: "contriversdev",
-  storageBucket: "contriversdev.appspot.com",
-  messagingSenderId: "1019807225038",
-  appId: "1:1019807225038:web:27e3161c49b943b2abac9f",
-  measurementId: "G-S162K48CSL"
-});
-
 const searchParams = new URLSearchParams(window.location.search)
 const id = searchParams.get('id')
 
@@ -107,8 +97,8 @@ pushProject.fetchFromStore();
 
 scrollu = (bool) => {
 
-	if (bool){$(".galleryitems img").css("height","auto")}
-	else {$(".galleryitems img").css("height","75vh")}
+	if (bool){$(".galleryitems img").css("max-height","auto")}
+	else {$(".galleryitems img").css("max-height","75vh")}
 
 
 }
@@ -116,14 +106,14 @@ scrollu = (bool) => {
 class related {
   constructor(){
     this.projContainer = $(".related-items");
-    this.relateditems = null;
+    this.relateditems = [];
   }
 
   projectsFromStore(){
     var db = firebase.firestore();
-    db.collection("mediatags").where("ids", "array-contains", id).where("category","==",true).get().then((snapshot) => {
+    db.collection("mediatags").where("ids", "array-contains", id).where("tags","==",false).get().then((snapshot) => {
       snapshot.docs.forEach((cat) =>{
-          this.relateditems = cat.data().ids
+          this.relateditems.concat(cat.data().ids);
           const index = this.relateditems.indexOf(id);
 					if (index > -1) {
 					  this.relateditems.splice(index, 1);

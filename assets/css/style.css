@@ -172,6 +172,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+::-ms-scrollbar {
+  width: 10px;
+}
+ 
+::-ms-scrollbar-thumb {
+  background: linear-gradient(var(--neonBlue),var(--black));
+}
+
+::-ms-scrollbar-track {
+  background: var(--black);
+}
+
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -2057,7 +2069,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 .galleryitems div{
 
   width: 100%;
-  max-height: 75vh;
+  height: 75vh;
   overflow-y: scroll;
 
 }
@@ -2068,6 +2080,9 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   width: 100%;
   height: 75vh;
   object-fit: cover;
+  position: relative;
+  z-index: 99;
+  cursor: context-menu;
   animation : autoscroll 50s infinite ease-in-out forwards;
 
 }
@@ -2128,6 +2143,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   border-radius: 25px;
   overflow: hidden;
   transition: 1s;
+  transform: translateY(0px);
 }
 
 .typecard h2 {
@@ -2189,7 +2205,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
   transform: translateY(-10px);
   cursor: pointer;
-  box-shadow: 0px 10px 25px var(--neonBlue);
+  box-shadow: 0px 15px 35px -20px var(--neonBlue);
 
 }
 
@@ -2365,3 +2381,4 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 }
 
 
+.swiper-button-next, .swiper-button-prev {color: var(--neonBlue);}

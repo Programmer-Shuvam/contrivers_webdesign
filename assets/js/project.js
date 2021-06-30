@@ -1,3 +1,6 @@
+const searchParams = new URLSearchParams(window.location.search)
+const type = searchParams.get('type')
+
 const scrollu = (bool) => {
 
 	if (bool){$(".galleryitems img").css("height","auto")}
@@ -9,7 +12,7 @@ const scrollu = (bool) => {
 function endstarter(){
 
 	$("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
-	$("#preloader").fadeOut("slow"); 
+	$("#preloader").fadeOut("slow");
 
 }
 
@@ -26,6 +29,10 @@ var projswiper = new Swiper(".showcase", {
             return '<span class="' + className + '">' + (index + 1) + "</span>";
           },
         },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },  
       });
 
 
@@ -109,6 +116,14 @@ db.collection("projects").get().then((snapshot) => {
   mapper["all"] = dataid;
   endstarter();
 
+}).then(() => {
+
+  if (type) {
+
+    showCase(type);
+
+  }
+
 });
 
 function seggregator( para ) {
@@ -132,7 +147,7 @@ function seggregator( para ) {
 
     arr.forEach(item => {
       let code = `<div class="swiper-slide">
-                      <img onmouseover="scrollu(true)" onmouseout="scrollu(false)" src="`+item+`" alt="image of name `+item+` of project named `+this.name+`">
+                      <img src="`+item+`" alt="image of name `+item+` of project named `+this.name+`">
                     </div>`;
 
         temp = real + code;
@@ -147,7 +162,7 @@ function seggregator( para ) {
           <div class="row gy-4">
 
         <div class="col-lg-8">
-          <div class="portfolio-details-slider swiper-container project-swiper">
+          <div onmouseover="scrollu(true)" onmouseout="scrollu(false)" class="portfolio-details-slider swiper-container project-swiper">
             <div class="align-items-top galleryitems swiper-wrapper">
               ${real}
             </div>
@@ -161,7 +176,7 @@ function seggregator( para ) {
                   <li><strong>Category</strong>: <span id="category">${myStore[el].category}</span></li>
                   <li><strong>Client</strong>: <span id="client">${myStore[el].client}</span></li>
                   <li><strong>Project date</strong>: <span id="date">${myStore[el].date}</span></li>
-                  <li><strong>Project URL</strong>: <a href="${myStore[el].link}" target="_blank" id="link">${myStore[el].category}</a></li>
+                  <li><strong>Project URL</strong>: <a href="${myStore[el].link}" target="_blank" id="link">${myStore[el].link}</a></li>
                 </ul>
               </div>
               <div class="portfolio-description">

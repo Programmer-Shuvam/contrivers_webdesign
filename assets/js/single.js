@@ -62,7 +62,7 @@ class fetchSingle {
 
 		this.imgs.forEach(item => {
 			let code = `<div class="swiper-slide">
-		                  <img onmouseover="scrollu(true)" onmouseout="scrollu(false)" src="`+item+`" alt="image of name `+item+` of project named `+this.name+`">
+		                  <img src="`+item+`" alt="image of name `+item+` of project named `+this.name+`">
 		                </div>`;
 
 		    this.gallery.append(code);
@@ -95,10 +95,10 @@ class fetchSingle {
 let pushProject = new fetchSingle(id);
 pushProject.fetchFromStore();
 
-scrollu = (bool) => {
+function scrollu(bool) {
 
-	if (bool){$(".galleryitems img").css("max-height","auto")}
-	else {$(".galleryitems img").css("max-height","75vh")}
+	if (bool){$(".galleryitems img").css({"height":"auto"});}
+	else {$(".galleryitems img").css("height","75vh");};
 
 
 }
@@ -113,7 +113,8 @@ class related {
     var db = firebase.firestore();
     db.collection("mediatags").where("ids", "array-contains", id).where("tags","==",false).get().then((snapshot) => {
       snapshot.docs.forEach((cat) =>{
-          this.relateditems.concat(cat.data().ids);
+
+          this.relateditems = [ ...this.relateditems , ...cat.data().ids];
           const index = this.relateditems.indexOf(id);
 					if (index > -1) {
 					  this.relateditems.splice(index, 1);
@@ -129,6 +130,7 @@ class related {
   callProjects(){
 
   	    var db = firebase.firestore();
+  	    if (this.relateditems.length == 0) {$(".relatedbox").css("display","none");};
   	    this.relateditems.forEach(el => {
 
 		    		var db = firebase.firestore();

@@ -11,7 +11,7 @@
 
   <title>Contrivers | An IT Consultant Group</title>
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="favicon.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -583,7 +583,7 @@
     <!-- End About Us Section -->
 
   <!-- announcement section -->
-    <section aria-label="Announcements" class="announcements">
+    <section aria-label="Announcements" class="announcements" style="display: none;">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Announcements</h2>
@@ -1600,8 +1600,13 @@
 
 <script>
   
-let pushToPorfolio = new projectFromStore();
-pushToPorfolio.projectsFromStore()
+window.addEventListener('DOMContentLoaded', (event) => {
+
+  let pushToPorfolio = new projectFromStore();
+  pushToPorfolio.projectsFromStore();
+
+});
+
   
 </script>
 

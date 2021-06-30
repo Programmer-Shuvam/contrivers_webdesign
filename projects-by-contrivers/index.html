@@ -11,8 +11,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+  <link href="../favicon.png" rel="icon">
+  <link href="../favicon.png" rel="apple-touch-icon">
 
   
     <!-- Google Fonts -->
@@ -227,7 +227,7 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper-container project-swiper">
+            <div class="portfolio-details-slider swiper-container project-swiper" onmouseover="scrollu(true)" onmouseout="scrollu(false)">
               <div class="align-items-top galleryitems swiper-wrapper">
               </div>
               <div class="swiper-pagination"></div>
@@ -254,7 +254,7 @@
 
       </div>
     </section>
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio relatedbox">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -267,7 +267,68 @@
       </div>
     </section><!-- End Portfolio Details Section -->
 
+    <section class="category">
 
+      <div class="container">
+        <div class="section-title">
+          <h2>Other Categories</h2>
+        </div>
+        <div class="row justify-center">
+
+           <div class="col-12 col-md-6 col-sm-6">
+
+            <div class="typecard" id="all" >
+              <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
+              <a href="../projects?type=all"><h2 class="bala">All</h2></a>
+            </div>
+
+           </div>
+           <div class="col-12 col-md-6 col-sm-6">
+
+            <div class="typecard" id="portfolio" >
+              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
+              <a href="../projects?type=portfolio"><h2>Portfolio</h2></a>
+            </div>
+
+           </div>
+           <div class="col-12 col-md-6 col-sm-6">
+
+            <div class="typecard" id="business" >
+              <img src="https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
+              <a href="../projects?type=business"><h2>Business <br> Site</h2></a>
+            </div>
+
+           </div>
+           <div class="col-12 col-md-6 col-sm-6">
+
+            <div class="typecard" id="e-commerce" >
+              <img src="https://images.pexels.com/photos/5076516/pexels-photo-5076516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
+              <a href="../projects?type=e-commerce"><h2>E-Commerce</h2> </a>             
+            </div>
+
+           </div>
+           <div class="col-12 col-md-6 col-sm-6">
+
+            <div class="typecard" id="prototypes">
+              <img src="https://images.pexels.com/photos/1178498/pexels-photo-1178498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
+              <a  href="../projects?type=prototypes"><h2>Prototypes</h2>
+</a>            </div>
+
+           </div>
+           <div class="col-12 col-md-6 col-sm-6">
+
+            <div class="typecard" id="custom" >
+              <img src="https://images.pexels.com/photos/1742370/pexels-photo-1742370.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=160" alt="">
+             <a href="../projects?type=custom"> <h2>Custom</h2></a>
+            </div>
+
+           </div> 
+
+        </div>
+
+      </div>
+
+    </section>
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <!-- Begin Mailchimp Signup Form -->

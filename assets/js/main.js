@@ -383,7 +383,7 @@ $("document").ready(function () {
           $(".navcontent ul li:nth-child(1) a").attr("class","active");
         },
 
-        offset : "0%",
+        offset : "150%",
         context: "#main"
         });  
 
@@ -490,9 +490,6 @@ if (screen.width > 768){
         slidesPerView: slidesper,
         spaceBetween: 30,
         loop: true,
-        autoplay: {
-                    delay: 5000,
-                  },
         loopFillGroupWithBlank: true,
         centeredSlides: true,
         pagination: {
@@ -508,7 +505,7 @@ document.getElementById("main").onscroll = () => {
   if (screen.height >= document.getElementById("main").scrollTop) {
 
      let x = document.getElementById('main').scrollTop / screen.height
-     $("#hero").css({"transform":`rotateZ(${-x*90}deg)`,"opacity":`${1-x}`})
+     $("#hero .container").css({"transform":`scale3d(1,${1-x},1)`,"opacity":`${1-x}`})
 
   }
 
@@ -516,8 +513,5 @@ document.getElementById("main").onscroll = () => {
 
 
 let bb = document.getElementById("chakri").getBBox()
-
-console.log(bb.x + bb.width / 2); 
-console.log(bb.y + bb.height / 2);
 
 document.getElementById("chakri").style.transformOrigin = `${bb.x + bb.width / 2}px ${bb.y + bb.height / 2}px` 

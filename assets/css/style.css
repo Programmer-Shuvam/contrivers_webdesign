@@ -238,7 +238,7 @@ section {
 #hero {
   width: auto;
   min-height: 100vh;
-  transform-origin: bottom left;
+  transform-origin: bottom;
   transition: 0.1s;
   /*margin-left: 5em;*/
   background: radial-gradient(var(--blue) 10%,var(--black));
@@ -752,7 +752,7 @@ section {
 
 .profit{
 
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("http://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center !important;;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center !important;;
   text-align: center;
   padding: auto 2em;
   min-height: unset !important;
@@ -837,7 +837,7 @@ section {
 --------------------------------------------------------------*/
 .cta {
   overflow: hidden;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("http://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("https://shtheme.org/demosd/snowlake/wp-content/uploads/2020/09/bg33.jpg") fixed center center !important;
   background-size: cover !important;
   min-height: unset !important;
   padding: 120px 0;
@@ -2070,7 +2070,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 
   width: 100%;
   height: 75vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 
 }
 

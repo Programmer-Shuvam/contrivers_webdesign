@@ -306,10 +306,7 @@
 #worksvg #chakri{
 
 	animation: chakri 25s infinite forwards ease-in-out;
-	-webkit-transform-origin: center;
-	-webkit-transform-box:  fill-box;
-	/*-moz-transform-origin: center ;*/
-	/*-moz-transform-box:  fill-box;*/
+	transform-origin: 569px 350.551px 0px;
 	transform: translateY(2em);
 
 }

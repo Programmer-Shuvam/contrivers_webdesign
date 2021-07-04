@@ -68,12 +68,17 @@ class projectFromStore {
 
 
   projectsFromStore(){
+
     var db = firebase.firestore();
     db.collection("projects").where("showit","==",true).get().then((snapshot) => {
       snapshot.docs.forEach((doc) =>{
           this.addProject(doc);
       })
 
+
+  }).catch((err) => {
+
+    $(".portfolio").css("display","none");
 
   });
      return Promise.resolve("Success");

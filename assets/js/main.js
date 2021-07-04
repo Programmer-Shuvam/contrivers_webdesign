@@ -510,8 +510,3 @@ document.getElementById("main").onscroll = () => {
   }
 
 };
-
-
-let bb = document.getElementById("chakri").getBBox()
-
-document.getElementById("chakri").style.transformOrigin = `${bb.x + bb.width / 2}px ${bb.y + bb.height / 2}px` 

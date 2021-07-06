@@ -220,7 +220,7 @@ section {
   bottom: 1px;
   left: calc(50% - 60px);
 }
-7
+
 .section-title h2::after {
   content: '';
   position: absolute;
@@ -254,7 +254,7 @@ section {
 
 #hero .container {
   padding-top: 0em;
- 474- overflow: visible;
+  overflow: visible;
 }
 
 #hero h1 {
@@ -2279,7 +2279,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   display: none;
   border : 2px solid var(--neonBlue);
   margin: 10px;
-  height: fit-content; !important;
+  height: fit-content !important;
 }
 
 @media (max-width: 576px){
@@ -2289,7 +2289,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
     border-radius: 25px;
     border: none;
     margin: 2px;
-    height: fit-content; !important;
+    height: fit-content !important;
   }
 
 }

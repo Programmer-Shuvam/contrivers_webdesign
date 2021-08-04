@@ -918,8 +918,9 @@ section {
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
-  height: fit-content;
+  height: 100%;
   display: flex;
+  width: 100%;
   justify-content: center;
   flex-direction: column;
 }
@@ -1082,6 +1083,13 @@ section {
   border-radius: 5px;
   background: radial-gradient(var(--blue) 20%, var(--black));
   transition: 0.5s;
+  margin: 0.5rem;
+}
+
+.team .row > div {
+
+  margin: auto;
+
 }
 
 .team .member .pic {
@@ -1109,6 +1117,7 @@ section {
   font-size: 20px;
   color: var(--neonBlue);
 }
+
 
 .team .member span {
   display: block;

@@ -60,7 +60,6 @@ class secMessages {
 
   }  
 };
-
 class projectFromStore {
   constructor(){
     this.projContainer = $(".mainitems");
@@ -75,6 +74,20 @@ class projectFromStore {
           this.addProject(doc);
       })
 
+      return true
+
+
+  }).then(() => {
+
+    var projectswipe = new Swiper(".projectswiper", {
+            slidesPerView: slidesper,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                        delay: 5000,
+                      },
+            loopFillGroupWithBlank: true,
+          });
 
   }).catch((err) => {
 
@@ -90,13 +103,15 @@ class projectFromStore {
     let tags = doc.data().tags
     let id = doc.id
     let code = `
-      <div class="col-lg-4 col-md-6 portfolio-item filter-all filter-`+tags.join(" filter-")+`">
+    <div class="swiper-slide">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-all filter-`+tags.join(" filter-")+`">
             <div class="portfolio-img"><img src="`+cover+`" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>`+name+`</h4>
               <a href="projects-by-contrivers?of-name=`+name+`&id=`+id+`" class="details-link" title="More Details" ><small>Go to `+name+`</small><i class="bx bx-link"></i></a>
             </div>
           </div>
+    </div>
     `
     this.projContainer.append(code);
   };  

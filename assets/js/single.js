@@ -111,16 +111,19 @@ class related {
 
   projectsFromStore(){
     var db = firebase.firestore();
-    db.collection("mediatags").where("ids", "array-contains", id).where("tags","==",false).get().then((snapshot) => {
-      snapshot.docs.forEach((cat) =>{
+    db.collection("mediatags").where("ids", "array-contains", id).where("tags","==",false).get().then(async (snapshot) => {
+		await snapshot.docs.forEach((cat) =>{
 
           this.relateditems = [ ...this.relateditems , ...cat.data().ids];
           const index = this.relateditems.indexOf(id);
 					if (index > -1) {
 					  this.relateditems.splice(index, 1);
 					}
-          this.callProjects();
-      })
+				})
+				
+		let uniqueChars = [...new Set(this.relateditems)]
+		this.relateditems = uniqueChars;
+		this.callProjects();
 
 
   });

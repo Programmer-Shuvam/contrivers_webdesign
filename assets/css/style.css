@@ -920,10 +920,11 @@ section {
   margin-bottom: 30px;
   height: 100%;
   display: flex;
-  width: 100%;
   justify-content: center;
   flex-direction: column;
 }
+
+.swiper-slide .portfolio-item{ width: 100%; }
 
 .portfolio .portfolio-item .portfolio-img {
   max-height: 25em;

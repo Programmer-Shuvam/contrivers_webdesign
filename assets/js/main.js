@@ -492,6 +492,9 @@ if (screen.width > 768){
         loop: true,
         loopFillGroupWithBlank: true,
         centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+        },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,

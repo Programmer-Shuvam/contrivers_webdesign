@@ -2,25 +2,27 @@
    * Portfolio details slider
    */
 
-  window.onload = function() {
-    var teamslide = new Swiper(".teamslide", {
-      grabCursor: true,
-      pagination: {
-        el: ".swiper-pagination",
-        type: "progressbar",
+const teamscroll = () =>{
+
+  var teamslide = new Swiper(".teamslide", {
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    effect: "creative",
+    creativeEffect: {
+      prev: {
+        shadow: true,
+        translate: [0, 0, -400],
       },
-      effect: "creative",
-      creativeEffect: {
-        prev: {
-          shadow: true,
-          translate: [0, 0, -400],
-        },
-        next: {
-          translate: ["100%", 0, 0],
-        },
+      next: {
+        translate: ["100%", 0, 0],
       },
-    });
-  };
+    },
+  });
+
+}
 
   /**
    * Animation on scroll

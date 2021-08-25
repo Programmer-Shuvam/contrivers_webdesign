@@ -10,6 +10,7 @@
   --green: #2BD700;
   --darkgray: #777777;
   --Blue: #0093e0;
+  --swiper-theme-color: #55FFFF; 
 }
 
 body {
@@ -1076,7 +1077,11 @@ section {
 */
 
 
+.team .swiper-container {
 
+  max-height: 90vh;
+
+}
 .team .member {
   position: relative;
   box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.05);
@@ -1087,11 +1092,13 @@ section {
   margin: 0.5rem;
 }
 
-.team .row > div {
+.team .swiper-slide {
 
   margin: auto;
+  width: 100%;
 
 }
+
 
 .team .member .pic {
   overflow: hidden;
@@ -2180,6 +2187,7 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
   background-size: cover;
   background-position: 50% 50%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: brightness(2);
   text-align: center;

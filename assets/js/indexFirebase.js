@@ -82,16 +82,31 @@ class projectFromStore {
     var projectswipe = new Swiper(".projectswiper", {
             slidesPerView: slidesper,
             spaceBetween: 30,
+            grabCursor: true,
             loop: true,
             autoplay: {
                         delay: 5000,
                       },
             loopFillGroupWithBlank: true,
           });
+    
+    $(".pre-img").css("animation","slideup 1.5s 1 ease-in-out forwards");
+    $("#logo-svg").css("display","block");
+    setTimeout(() => {
+      $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
+      $("#preloader").fadeOut("slow"); 
+    }, 5000);      
 
   }).catch((err) => {
 
     $(".portfolio").css("display","none");
+    $(".pre-img").css("animation","slideup 1.5s 1 ease-in-out forwards");
+    $("#logo-svg").css("display","block");
+    setTimeout(() => {
+      $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
+      $("#preloader").fadeOut("slow"); 
+    }, 5000);
+
 
   });
      return Promise.resolve("Success");
@@ -118,3 +133,6 @@ class projectFromStore {
 
 
   }
+
+  let pushToPorfolio = new projectFromStore();
+  pushToPorfolio.projectsFromStore();

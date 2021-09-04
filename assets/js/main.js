@@ -326,6 +326,52 @@ if (screen.width > 768){
         },
       });
 
+if (screen.width > 551){
+
+  var eventsswipe = new Swiper(".event-slide", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+    loop:true,
+    autoplay: {
+      delay: 5000,
+    },
+  }); 
+
+} else{
+
+  var eventsswipe = new Swiper(".event-slide", {
+    effect: "cards",
+    grabCursor: true,
+    autoplay: {
+      delay: 5000,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + (index + 1) + "</span>";
+      },
+    },
+  }); 
+
+}    
+
 
 
 document.getElementById("main").onscroll = () => {

@@ -94,7 +94,8 @@ class projectFromStore {
     $("#logo-svg").css("display","block");
     setTimeout(() => {
       $("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
-      $("#preloader").fadeOut("slow"); 
+      $("#preloader").fadeOut("slow");
+      teamscroll(); 
     }, 5000);      
 
   }).catch((err) => {

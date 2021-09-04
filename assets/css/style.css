@@ -388,30 +388,70 @@ section {
 
 
 /*--------------------------------------------------------------
-# Cliens
+# Events
 --------------------------------------------------------------*/
-.cliens {
-  padding: 12px 0;
+
+.events .swiper-slide > div{
+
+  width: 100%;
+  max-width: 25rem;
+  height: fit-content;
+  border-radius: 2rem;
   text-align: center;
+  margin: 1rem auto;
+  overflow: visible;
+  padding: 5% ;
+  cursor: pointer;
+  /* background-color: var(--white); */
+  /* box-shadow: 0rem 0rem 1rem 5px var(--neonBlue); */
+  /* border: 3px solid var(--neonBlue); */
+
 }
 
-.cliens img {
-  max-width: 45%;
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-  filter: grayscale(100);
+.events .event-slide{overflow: visible; }
+
+.events .swiper-slide{
+  height: fit-content;
+  overflow: visible;
+  max-width: 25rem;
+  background-color: var(--black);
+}
+.events .event-slide .swiper-pagination-bullet{width: 1.5rem;height: 1.5rem;color: var(--brightwhite); font-weight: 800;}
+.events .event-slide .swiper-pagination-bullet-active{width: 1.5rem;height: 1.5rem;color: var(--black) !important; font-weight: 800;}
+.events .swiper-slide > div img{
+
+  width: 100%;
+  margin: auto;
+  margin-bottom: 2rem;
+  box-shadow: 0rem 0rem 3rem 0rem rgba(85 , 255, 255, .3);
+  border-radius: .5rem;
+
 }
 
-.cliens img:hover {
-  filter: none;
-  transform: scale(1.1);
+.events .swiper-slide > div a{
+
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: 'Jost','san-serif';
+  border-radius: 30rem;
+  padding: 5px 1.5rem;
+  border: 2px solid var(--neonBlue);
+  box-shadow: 0px 5px 2rem rgba(85 , 255, 255, .5);
+  transition: .7s cubic-bezier(0.39, 0.575, 0.565, 1);
+
 }
 
-@media (max-width: 768px) {
-  .cliens img {
-    max-width: 40%;
-  }
+.events .swiper-slide > div a:hover{
+
+  box-shadow: 0px 0px 6rem rgba(85 , 255, 255, .5);
+
+}
+
+@media (max-width: 800px) {
+  
+  .events .swiper-slide > div a{font-size: 1.25rem;}
+  .events .event-slide .swiper-pagination-bullet{scale: 0.6;}
+
 }
 
 /*--------------------------------------------------------------
@@ -1236,7 +1276,6 @@ section {
 .pricing .box {
   padding: 60px 40px;
   display: flex;
-  /*float: left;*/
   flex-direction: column;
   background: var(--blue);
   height: fit-content;
@@ -1246,7 +1285,6 @@ section {
   margin: 0px auto;
   width: auto;
   max-width: 30em;
-  /*scroll-snap-align: center;*/
 }
 
 .pricing h3 {
@@ -2128,9 +2166,6 @@ input#mce-EMAIL:focus,input#mce-FNAME:focus{border-color: #70dacd !important;out
 }
 .meta{
   color: var(--Blue);
-}
-.announcements{
-  margin-bottom: 0;
 }
 
 

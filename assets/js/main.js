@@ -349,7 +349,7 @@ if (screen.width > 551){
     },
     loop:true,
     autoplay: {
-      delay: 5000,
+      delay: 2500,
     },
   }); 
 
@@ -359,8 +359,9 @@ if (screen.width > 551){
     effect: "cards",
     grabCursor: true,
     autoplay: {
-      delay: 5000,
+      delay: 2500,
     },
+    loop:true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

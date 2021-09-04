@@ -402,9 +402,6 @@ section {
   overflow: visible;
   padding: 5% ;
   cursor: pointer;
-  /* background-color: var(--white); */
-  /* box-shadow: 0rem 0rem 1rem 5px var(--neonBlue); */
-  /* border: 3px solid var(--neonBlue); */
 
 }
 
@@ -414,7 +411,7 @@ section {
   height: fit-content;
   overflow: visible;
   max-width: 25rem;
-  background-color: var(--black);
+  border-radius: 2rem;
 }
 .events .event-slide .swiper-pagination-bullet{width: 1.5rem;height: 1.5rem;color: var(--brightwhite); font-weight: 800;}
 .events .event-slide .swiper-pagination-bullet-active{width: 1.5rem;height: 1.5rem;color: var(--black) !important; font-weight: 800;}
@@ -453,6 +450,8 @@ section {
   .events .event-slide .swiper-pagination-bullet{scale: 0.6;}
 
 }
+
+@media (max-width: 550px){.event-slide .swiper-slide{background-color: var(--black);}}
 
 /*--------------------------------------------------------------
 # About Us

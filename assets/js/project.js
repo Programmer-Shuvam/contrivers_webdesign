@@ -162,7 +162,7 @@ function seggregator( para ) {
           <div class="row gy-4">
 
         <div class="col-lg-8">
-          <div onmouseover="scrollu(true)" onmouseout="scrollu(false)" class="portfolio-details-slider swiper-container project-swiper">
+          <div onmouseover="scrollu(true)" onmouseout="scrollu(false)" class="portfolio-details-slider swiper project-swiper">
             <div class="align-items-top galleryitems swiper-wrapper">
               ${real}
             </div>

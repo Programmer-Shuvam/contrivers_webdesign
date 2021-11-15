@@ -1,5 +1,84 @@
-const searchParams = new URLSearchParams(window.location.search)
-const type = searchParams.get('type')
+const searchParams = new URLSearchParams(window.location.search);
+const type = searchParams.get('type');
+
+
+function endstarter(){
+
+	$("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
+	$("#preloader").fadeOut("slow");
+
+};
+var db = firebase.firestore();
+var myStore = {};
+var mapper = {};
+db.collection("mediatags").where("tags","==",false).get().then(snapshot => {
+  snapshot.docs.forEach(doc => {
+    let key = doc.id;
+    let data = doc.data().ids;
+    mapper[key] =  data;
+
+  });
+
+});
+db.collection("projects").get().then((snapshot) => {
+
+  snapshot.docs.forEach(el => {
+
+    let key = el.id;
+    let data = el.data();
+    myStore[key] =  data;
+
+  });
+
+
+
+  let dataid = []
+  snapshot.docs.forEach(el => {
+
+    dataid.push(el.id);
+
+  });
+  mapper["all"] = dataid;
+  endstarter();
+
+}).then(() => {
+
+  if (type) {
+
+    showCase(type);
+
+  }
+
+});
+
+var swiper = new Swiper(".project-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      autoplay: {
+                  delay: 5000,
+                },
+      loopFillGroupWithBlank: true,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+$(`.exhibition header li a`).click((event) => {
+	event.preventDefault();
+	$(`.exhibition header li a`).removeClass();
+	event.target.className = "active";
+  try {
+    seggregator(event.target.getAttribute( 'id' ));
+
+  }
+  catch(err) {
+    console.log("Sorry, currently we don't have projects on this.");
+  }
+
+})
+
 
 const scrollu = (bool) => {
 
@@ -9,17 +88,9 @@ const scrollu = (bool) => {
 
 }
 
-function endstarter(){
-
-	$("#preloader").css("animation","scale-fade 1s 1 ease-in-out forwards");
-	$("#preloader").fadeOut("slow");
-
-}
-
 var projswiper = new Swiper(".showcase", {
-		slidesPerView: 1,
+    slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
         grabCursor: true,
         centeredSlides: true,
         pagination: {
@@ -35,24 +106,7 @@ var projswiper = new Swiper(".showcase", {
         },  
       });
 
-
-var swiper = new Swiper(".project-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-                  delay: 5000,
-                },
-      loopFillGroupWithBlank: true,
-      centeredSlides: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
-
-showCase = cat => {
+function showCase(cat) {
 
 	$(".category").fadeOut();
 	$(".exhibition").fadeIn(2000);
@@ -66,72 +120,14 @@ showCase = cat => {
 
 }
 
-$(`.exhibition header li a`).click((event) => {
-
-	event.preventDefault();
-	$(`.exhibition header li a`).removeClass();
-	event.target.className = "active";
-  try {
-    seggregator(event.target.getAttribute( 'id' ));
-
-  }
-  catch(err) {
-    console.log("Sorry, currently we don't have projects on this.");
-  }
-
-})
-
-var db = firebase.firestore();
-var myStore = {};
-var mapper = {};
-
-db.collection("mediatags").where("tags","==",false).get().then(snapshot => {
-
-  snapshot.docs.forEach(doc => {
-    let key = doc.id;
-    let data = doc.data().ids
-    mapper[key] =  data;
-
-  })
-
-})
-
-db.collection("projects").get().then((snapshot) => {
-
-  snapshot.docs.forEach(el => {
-
-    let key = el.id;
-    let data = el.data();
-    myStore[key] =  data;
-
-  })
 
 
-  let dataid = []
-  snapshot.docs.forEach(el => {
-
-    dataid.push(el.id);
-
-  })
-  mapper["all"] = dataid;
-  endstarter();
-
-}).then(() => {
-
-  if (type) {
-
-    showCase(type);
-
-  }
-
-});
 
 function seggregator( para ) {
 
   $(".swiper-wrapper").empty();
   $(".casepreloader").css("display","block");
   $(".showcase").css("display","none");
-
   mapper[ para ].forEach(el => {
 
     let arr = [];
@@ -200,22 +196,6 @@ function seggregator( para ) {
        $(".showcase").css("display","block");
        projswiper.update();
     })
-  projswiper.update();
-  swiper.update();
+  // swiper.update();
 
 }
-
-
-
-
-// class myStore {
-
-//   constructor (){
-
-
-
-//   }
-
-// }
-    // db.collection("mediatags")       
-

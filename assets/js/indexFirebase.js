@@ -7,6 +7,10 @@ firebase.initializeApp({
   appId: "1:1019807225038:web:27e3161c49b943b2abac9f",
   measurementId: "G-S162K48CSL"
 });
+
+const analytics = firebase.analytics();
+
+
 const messaging = firebase.messaging();
 messaging.onMessage((payload) => {
   console.log('Message received. ', payload);
